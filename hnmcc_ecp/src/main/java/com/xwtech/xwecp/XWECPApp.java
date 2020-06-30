@@ -11,4 +11,5 @@ public class XWECPApp
 	public static ApplicationContext SPRING_CONTEXT = null;
 	
 	public static RedisClient redisCli = null;
+	public static String name=null;
 }
