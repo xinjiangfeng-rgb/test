@@ -1,0 +1,4 @@
+package com.xwtech.xwecp.service.logic.pojo;
+
+public class FailureWorkOrderBeans {
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="GB2312"?>
+<service-metadata>
+  <namespace>ccom.xwtech.xwecp.service.logic.client_impl.common.IQrygprsdayfluxService</namespace>
+  <!-- 命名空间, 对应java类名 -->
+  <name>qryGprsDayFlux</name>
+  <!-- 接口名称, 对应于namespace类中的方法 -->
+  <cmd>QRY040064</cmd>
+  <!-- 命令字 -->
+  <chinese-name>逻辑接口 - 4G月日流量查询</chinese-name>
+  <!-- 中文名称 -->
+  <description>4G月日流量查询</description>
+  <input>
+    <param name="phoneNum" data-type="string" regular="" index="1" description="号码"/>
+    <param name="startDate" data-type="string" regular="" index="2" description="开始日期"/>
+    <param name="endDate" data-type="string" regular="" index="3" description="结束日期"/>
+  </input>
+  <output>
+    <field name="gprsDayFluxList" data-type="list" class="GprsDayFlux" description="日流量明细"/>
+  </output>
+  <impl direct-impl="false" impl-class="">  --true则无需执行以下代码
+    <boss-teletext-mapping>
+       <!--boss-teletext param-name="*" match="*" template="" direct-impl="com.xwtech.xwecp.service.logic.invocation.QryGprsDayFluxInvocation"/-->
+      <boss-teletext param-name="*" match="*" template="cc_4gqrygprsdayflux_70" resolver="com.xwtech.xwecp.service.logic.resolver.QryGprsDayFluxResolver"/>
+    </boss-teletext-mapping>
+    <result-mapping template="cc_4gqrygprsdayflux_70">
+      <mapping name="gprsDayFluxList" expression="xpath(/operation_out/content)">
+        <mapping name="dayNum" index="0" expression="xpath(./imsi/text())"/>
+        <mapping name="dayAllRes" index="1" expression="xpath(./imsi/text())"/>
+        <mapping name="gprs2GFlux" index="9" expression="xpath(./imsi/text())"/>
+        <mapping name="gprs3GFlux" index="10" expression="xpath(./imsi/text())"/>
+        <mapping name="gprs4GFlux" index="11" expression="xpath(./imsi/text())"/>
+      </mapping>
+    </result-mapping>
+  </impl>
+  <extension>
+    <class name="GprsDayFlux">
+      <field name="dayNum" data-type="string" default="" description="月日期"/>
+      <field name="dayAllRes" data-type="string" default="" description=""/>
+      <field name="gprs2GFlux" data-type="string" default="" description="2G流量"/>
+      <field name="gprs3GFlux" data-type="string" default="" description="3G流量"/>
+      <field name="gprs4GFlux" data-type="string" default="" description="4G流量"/>
+    </class>
+  </extension>
+</service-metadata>

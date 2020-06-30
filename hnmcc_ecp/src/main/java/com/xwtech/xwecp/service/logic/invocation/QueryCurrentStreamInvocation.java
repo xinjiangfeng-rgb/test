@@ -1,0 +1,228 @@
+package com.xwtech.xwecp.service.logic.invocation;
+
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+import com.xwtech.xwecp.XWECPApp;
+import com.xwtech.xwecp.communication.CommunicateException;
+import com.xwtech.xwecp.communication.IRemote;
+import com.xwtech.xwecp.dao.WellFormedDAO;
+import com.xwtech.xwecp.msg.RequestParameter;
+import com.xwtech.xwecp.service.BaseServiceInvocationResult;
+import com.xwtech.xwecp.service.ILogicalService;
+import com.xwtech.xwecp.service.config.ServiceConfig;
+import com.xwtech.xwecp.service.logic.pojo.CurrentStream;
+import com.xwtech.xwecp.service.logic.pojo.QRY170911Result;
+import com.xwtech.xwecp.service.server.DefaultServiceImpl.StringTeletext;
+import com.xwtech.xwecp.teletext.BossTeletextUtil;
+import com.xwtech.xwecp.util.MessageJsonUtil;
+import com.xwtech.xwecp.util.MessageUtil;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.log4j.Logger;
+import org.springframework.context.ApplicationContext;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+/**
+ * <p>Title: QueryCurrentStreamInvocation</p>
+ * <p>Description: 查询流量接口</p>
+ * <p>Company: </p> 
+ * @author wangtw
+ * @date 2017年11月17日 上午10:29:34
+ */
+public class QueryCurrentStreamInvocation extends BaseInvocation implements ILogicalService {
+	@SuppressWarnings("unused")
+	private static final Logger logger = Logger.getLogger(QueryCurrentStreamInvocation.class);
+	private BossTeletextUtil bossTeletextUtil;
+	private IRemote remote;
+	private WellFormedDAO wellFormedDAO;
+	private String REQUEST_BOSSTELETEXT = "cc_queryCurrentSteam";
+	
+	public QueryCurrentStreamInvocation() {
+		ApplicationContext springCtx = XWECPApp.SPRING_CONTEXT;
+		this.bossTeletextUtil = (BossTeletextUtil) (springCtx.getBean("bossTeletextUtil"));
+		this.remote = (IRemote) (springCtx.getBean("bossRemote"));
+		this.wellFormedDAO = (WellFormedDAO) (springCtx.getBean("wellFormedDAO"));
+	}
+	
+	
+	@Override
+	public BaseServiceInvocationResult executeService(String accessId, ServiceConfig config,
+			List<RequestParameter> params) {
+		QRY170911Result result = new QRY170911Result();
+		
+		List<CurrentStream> streamList = new ArrayList<CurrentStream>();
+		CurrentStream currentStream;
+		result.setResultCode(LOGIC_SUCESS);
+        result.setErrorMessage("");
+        try
+        {
+
+        	//获取CRM 接口请求模板
+        	String reqXml = this.bossTeletextUtil.mergeTeletext(REQUEST_BOSSTELETEXT, params);
+
+        	//获取能力平台接口请求模板
+			Map<String, Object> remotingMap = this.bossTeletextUtil.mergeRemoteTeletext(REQUEST_BOSSTELETEXT, params);
+			String sysParam = "";
+			String busiParam = "";
+			String type = StringTeletext.DEFAULT_REQ_TYPE;
+			if(null!=remotingMap){
+				sysParam = remotingMap.get("sysParam")==null?"":(String)remotingMap.get("sysParam");
+				busiParam = remotingMap.get("busiParam")==null?"":(String)remotingMap.get("busiParam");
+				type = remotingMap.get("type")==null?"0":(String)remotingMap.get("type");
+			}
+
+			String headTraceId = "";
+			String headUserMobile = "";
+			String headUserBrand = "";
+			String headUserCity = "";
+			String headPageNum = "";
+			String headRecNum = "";
+			String headSerialNum = "";
+			String headJfserialNum = "";
+			String headProdId = "";
+			if (null != params && 0 < params.size()) {
+				for (RequestParameter parameter : params) {
+					String paramName = parameter.getParameterName();
+					if ("header_traceId".equals(paramName)) {
+						headTraceId = (String)parameter.getParameterValue();
+					}else if ("header_usermobile".equals(paramName)) {
+						headUserMobile = (String)parameter.getParameterValue();
+					}else if ("header_userbrand".equals(paramName)) {
+						headUserBrand = (String)parameter.getParameterValue();
+					}else if ("header_usercity".equals(paramName)) {
+						headUserCity = (String)parameter.getParameterValue();
+					}else if ("header_pagenum".equals(paramName)) {
+						headPageNum = (String) parameter.getParameterValue();
+					} else if ("header_recnum".equals(paramName)) {
+						headRecNum = (String) parameter.getParameterValue();
+					} else if ("header_serialnum".equals(paramName)) {
+						headSerialNum = (String) parameter.getParameterValue();
+					} else if ("header_jfserialnum".equals(paramName)) {
+						headJfserialNum = (String) parameter.getParameterValue();
+					}else if ("header_prodId".equals(paramName)) {
+						headProdId = (String)parameter.getParameterValue();
+					}
+				}
+			}
+			headTraceId = headTraceId == null ? "" : headTraceId;
+			headUserMobile = headUserMobile == null ? "" : headUserMobile;
+			headUserBrand = headUserBrand == null ? "" : headUserBrand;
+			headUserCity = headUserCity == null ? "" : headUserCity;
+
+			headPageNum = headPageNum == null ? "" : headPageNum;
+			headRecNum = headRecNum == null ? "" : headRecNum;
+			headSerialNum = headSerialNum == null ? "" : headSerialNum;
+			headJfserialNum = headJfserialNum == null ? "" : headJfserialNum;
+			headProdId = headProdId == null ? "" : headProdId;
+			//rspXml = (String)this.remote.callRemote(new StringTeletext(reqXml, accessId, REQUEST_BOSSTELETEXT, this.generateCity(params)));
+
+			String rspXml = (String)this.remote.callRemote(new StringTeletext(sysParam,busiParam,type,reqXml, accessId,
+					REQUEST_BOSSTELETEXT, this.generateCity(params),headTraceId,headUserMobile,headUserBrand,headUserCity,
+					headPageNum,headRecNum,headSerialNum,headJfserialNum,headProdId));
+
+
+            logger.info("流量查询TYPE : " + type);
+            if(StringTeletext.DEFAULT_REQ_TYPE.equals(type)){
+				logger.info("******** Boss返回数据为*****　" + rspXml);
+				if (StringUtils.isEmpty(rspXml) || rspXml.getBytes().length < 120)
+				{
+					result.setBossCode(LOGIC_ERROR);
+					result.setErrorCode(LOGIC_ERROR);
+					return result;
+				}
+				String errCode = MessageUtil.parse(rspXml).getHead().getCode();
+				String errDesc = MessageUtil.parse(rspXml).getHead().getDesc();
+
+				List<String[]> resList = MessageUtil.parse(rspXml).getBody().asList();
+				logger.info(resList.size());
+				for(String[] temp:resList){
+					currentStream = new CurrentStream();
+					if(temp.length>1){
+						currentStream.setITEM_ID(temp[0]);
+						currentStream.setITEM_NAME(temp[1]);
+						currentStream.setPROD_ID(temp[2]);
+						currentStream.setDONE_CODE(temp[3]);
+						currentStream.setFREE_RES(temp[4]);
+						currentStream.setFREE_RES_USED(temp[5]);
+						currentStream.setFREE_RES_REMAIN(temp[6]);
+						currentStream.setVALID_DATE(temp[7]);
+						currentStream.setEXPIRE_DATE(temp[8]);
+						currentStream.setUNITDES(temp[9]);
+						currentStream.setFREE_RES_TYPE(temp[10]);
+						currentStream.setRECORDTYPE(temp[11]);
+						streamList.add(currentStream);
+					}else{
+						result.setTw(temp[0]);
+					}
+				}
+				result.setCurrentStream(streamList);
+				result.setResultCode(BOSS_SUCCESS.equals(errCode) ? LOGIC_SUCESS : LOGIC_ERROR);
+				result.setBossCode(errCode);
+				result.setErrorMessage(errDesc);
+
+			}else if(StringTeletext.REMOTING_REQ_TYPE.equals(type)){
+				logger.info("******** Boss返回数据为*****　" + rspXml);
+				if (StringUtils.isEmpty(rspXml))
+				{
+					result.setBossCode(LOGIC_ERROR);
+					result.setErrorCode(LOGIC_ERROR);
+					return result;
+				}
+				MessageJsonUtil bossJson = MessageJsonUtil.getInstance((String) rspXml);
+				String bossCode = bossJson.getBossCode();
+				String bossDesc = bossJson.getBossDesc();
+				if (!MessageJsonUtil.BOSS_CODE.equals(bossCode)){
+					result.setBossCode(LOGIC_ERROR);
+					result.setErrorCode(LOGIC_ERROR);
+					return result;
+				}
+
+
+                logger.info("流量查询：" + bossJson.getStringResult());
+                JSONArray array = JSONArray.parseArray(bossJson.getStringResult());
+                logger.info("流量查询SIZE: " + array.size());
+                JSONObject jsonObj;
+				for(int i = 0;i<array.size();i++){
+					jsonObj = (JSONObject)array.get(i);
+					currentStream = new CurrentStream();
+						currentStream.setITEM_ID(jsonObj.getString("ITEM_ID"));
+						currentStream.setITEM_NAME(jsonObj.getString("ITEM_NAME"));
+						currentStream.setPROD_ID(jsonObj.getString("PROD_ID"));
+						currentStream.setDONE_CODE(jsonObj.getString("DONE_CODE"));
+						currentStream.setFREE_RES(jsonObj.getString("FREE_RES"));
+						currentStream.setFREE_RES_USED(jsonObj.getString("FREE_RES_USED"));
+						currentStream.setFREE_RES_REMAIN(jsonObj.getString("FREE_RES_REMAIN"));
+						currentStream.setVALID_DATE(jsonObj.getString("VALID_DATE"));
+						currentStream.setEXPIRE_DATE(jsonObj.getString("EXPIRE_DATE"));
+						currentStream.setUNITDES(jsonObj.getString("UNITDES"));
+						currentStream.setFREE_RES_TYPE(jsonObj.getString("FREE_RES_TYPE"));
+						currentStream.setRECORDTYPE(jsonObj.getString("RECORDTYPE"));
+						String tw = jsonObj.getString("TW");
+                        if (StringUtils.isNotBlank(tw)) {
+                            result.setTw(tw);
+
+                        }
+						streamList.add(currentStream);
+
+				}
+
+				result.setCurrentStream(streamList);
+				result.setResultCode(MessageJsonUtil.LOGIC_SUCESS);
+				result.setBossCode(bossCode);
+				result.setErrorMessage(StringUtils.isNotBlank(bossDesc)?bossDesc:bossJson.getStringResult());
+
+			}
+        }
+        catch (CommunicateException e)
+        {
+            logger.error(e, e);
+        }
+        catch (Exception e)
+        {
+            logger.error(e, e);
+        }
+        return result;
+	}
+
+}

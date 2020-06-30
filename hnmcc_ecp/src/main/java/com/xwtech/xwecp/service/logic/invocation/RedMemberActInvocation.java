@@ -1,0 +1,157 @@
+package com.xwtech.xwecp.service.logic.invocation;
+
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+import com.xwtech.xwecp.XWECPApp;
+import com.xwtech.xwecp.communication.IRemote;
+import com.xwtech.xwecp.dao.WellFormedDAO;
+import com.xwtech.xwecp.msg.RequestParameter;
+import com.xwtech.xwecp.service.BaseServiceInvocationResult;
+import com.xwtech.xwecp.service.ILogicalService;
+import com.xwtech.xwecp.service.config.ServiceConfig;
+import com.xwtech.xwecp.service.logic.pojo.*;
+import com.xwtech.xwecp.service.server.DefaultServiceImpl.StringTeletext;
+import com.xwtech.xwecp.teletext.BossTeletextUtil;
+import com.xwtech.xwecp.util.MessageJsonUtil;
+import com.xwtech.xwecp.util.MessageUtil;
+import com.xwtech.xwecp.util.MessageUtil.Message;
+import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;import org.slf4j.LoggerFactory;
+import org.springframework.context.ApplicationContext;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+public class RedMemberActInvocation extends BaseInvocation implements
+		ILogicalService {
+
+	private static final Logger logger = LoggerFactory.getLogger(RedMemberActInvocation.class);
+
+	private BossTeletextUtil bossTeletextUtil;
+
+	private IRemote remote;
+	//激活集团红包
+	private String REQUEST_BOSSTELETEXT = "cc_queryAddMember";
+
+	public RedMemberActInvocation() {
+		ApplicationContext springCtx = XWECPApp.SPRING_CONTEXT;
+		this.bossTeletextUtil = (BossTeletextUtil)(springCtx.getBean("bossTeletextUtil"));
+		this.remote = (IRemote)(springCtx.getBean("bossRemote"));
+		this.wellFormedDAO = (WellFormedDAO)(springCtx.getBean("wellFormedDAO"));
+	}
+
+
+	public BaseServiceInvocationResult executeService(String accessId,ServiceConfig config, List<RequestParameter> params) {
+		QRY040301Result result = new QRY040301Result();
+		result.setResultCode(LOGIC_SUCESS);
+		result.setErrorMessage("");
+		String reqXml = "";
+		String rspXml = "";
+		try {
+			//激活集团红包
+			reqXml = this.bossTeletextUtil.mergeTeletext(REQUEST_BOSSTELETEXT, params);
+
+			Map<String, Object> remotingMap = this.bossTeletextUtil.mergeRemoteTeletext(REQUEST_BOSSTELETEXT, params);
+			String sysParam = "";
+			String busiParam = "";
+			String type = StringTeletext.DEFAULT_REQ_TYPE;
+			if(null!=remotingMap){
+				sysParam = remotingMap.get("sysParam")==null?"":(String)remotingMap.get("sysParam");
+				busiParam = remotingMap.get("busiParam")==null?"":(String)remotingMap.get("busiParam");
+				type = remotingMap.get("type")==null?"0":(String)remotingMap.get("type");
+			}
+
+			String headTraceId = "";
+			String headUserMobile = "";
+			String headUserBrand = "";
+			String headUserCity = "";
+			String headPageNum = "";
+			String headRecNum = "";
+			String headSerialNum = "";
+			String headJfserialNum = "";
+			String headProdId = "";
+			if (null != params && 0 < params.size()) {
+				for (RequestParameter parameter : params) {
+					String paramName = parameter.getParameterName();
+					if ("header_traceId".equals(paramName)) {
+						headTraceId = (String)parameter.getParameterValue();
+					}else if ("header_usermobile".equals(paramName)) {
+						headUserMobile = (String)parameter.getParameterValue();
+					}else if ("header_userbrand".equals(paramName)) {
+						headUserBrand = (String)parameter.getParameterValue();
+					}else if ("header_usercity".equals(paramName)) {
+						headUserCity = (String)parameter.getParameterValue();
+					}else if ("header_pagenum".equals(paramName)) {
+						headPageNum = (String) parameter.getParameterValue();
+					} else if ("header_recnum".equals(paramName)) {
+						headRecNum = (String) parameter.getParameterValue();
+					} else if ("header_serialnum".equals(paramName)) {
+						headSerialNum = (String) parameter.getParameterValue();
+					} else if ("header_jfserialnum".equals(paramName)) {
+						headJfserialNum = (String) parameter.getParameterValue();
+					}else if ("header_prodId".equals(paramName)) {
+						headProdId = (String)parameter.getParameterValue();
+					}
+				}
+			}
+			headTraceId = headTraceId == null ? "" : headTraceId;
+			headUserMobile = headUserMobile == null ? "" : headUserMobile;
+			headUserBrand = headUserBrand == null ? "" : headUserBrand;
+			headUserCity = headUserCity == null ? "" : headUserCity;
+
+			headPageNum = headPageNum == null ? "" : headPageNum;
+			headRecNum = headRecNum == null ? "" : headRecNum;
+			headSerialNum = headSerialNum == null ? "" : headSerialNum;
+			headJfserialNum = headJfserialNum == null ? "" : headJfserialNum;
+			headProdId = headProdId == null ? "" : headProdId;
+
+			rspXml = (String)this.remote.callRemote(new StringTeletext(sysParam,busiParam,type,reqXml, accessId,
+					REQUEST_BOSSTELETEXT, this.generateCity(params),headTraceId,headUserMobile,headUserBrand,headUserCity,
+					headPageNum,headRecNum,headSerialNum,headJfserialNum,headProdId));
+
+			if(StringTeletext.DEFAULT_REQ_TYPE.equals(type)){
+				//集团红包只提供了能力开放平台的接口，没有提供socket接口，SO......不走这里。
+				//想走这里，自己联调socket接口
+			}else if(StringTeletext.REMOTING_REQ_TYPE.equals(type)){
+				if (StringUtils.isEmpty(rspXml)){
+					result.setBossCode(LOGIC_ERROR);
+					result.setErrorCode(LOGIC_ERROR);
+					return result;
+				}
+				MessageJsonUtil bossJson = MessageJsonUtil.getInstance((String) rspXml);
+				String bossCode = bossJson.getBossCode();
+				String bossDesc = bossJson.getBossDesc();
+				if (!MessageJsonUtil.BOSS_CODE.equals(bossCode)){
+					result.setBossCode(LOGIC_ERROR);
+					result.setErrorCode(LOGIC_ERROR);
+					return result;
+				}
+
+				String otherCode = "";
+				String otherDesc = "";
+				JSONArray valueList = bossJson.getJSONArrayResult();
+				for (int j = 0; j < valueList.size(); j++){
+					JSONObject jsonObj = (JSONObject) valueList.get(j);
+					otherCode = jsonObj.getString("RESPCODE");
+					otherDesc = jsonObj.getString("RESPDESC");
+					if(null == otherCode || "".equals(otherCode) || !"0000".equals(otherCode)){
+						//没返回RESPCODE和不是0000的情况都属于失败
+						result.setBossCode(otherCode);
+						result.setErrorCode(otherDesc);
+						return result;
+					}
+				}
+
+				result.setResultCode(MessageJsonUtil.LOGIC_SUCESS);
+				result.setBossCode(bossCode);
+				result.setErrorMessage(StringUtils.isNotBlank(otherDesc)?otherDesc:bossDesc);
+			}
+		}
+		catch (Exception e) {
+			logger.error("", e);
+		}
+		return result;
+	}	
+}

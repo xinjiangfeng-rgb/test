@@ -1,0 +1,22 @@
+import com.xwtech.xwecp.dao.DAOException;
+
+/**
+ * Created by 54344 on 2018/8/22.
+ */
+
+//@RunWith(SpringJUnit4ClassRunner.class)
+//@ContextConfiguration(locations = {"classpath:cfg/applicationContext-*.xml"})
+public class Test {
+
+
+    @org.junit.Test
+    public void test() throws DAOException {
+
+        String cmd = "QRY161108";
+        String sql = "select  tlf.F_LI_ALL_TMP  from T_LINTERFACE_DA tlf where tlf.F_LI_NUMBER='" + cmd
+                + "' and tlf.F_LI_STATE = 1";
+
+        System.out.println(sql);
+
+    }
+}

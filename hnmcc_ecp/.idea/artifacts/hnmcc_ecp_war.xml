@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="hnmcc_ecp:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>hnmcc_ecp</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="hnmcc_ecp.war">
+      <element id="artifact" artifact-name="hnmcc_ecp:war exploded" />
+    </root>
+  </artifact>
+</component>

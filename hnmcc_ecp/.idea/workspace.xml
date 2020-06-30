@@ -1,0 +1,2049 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="hnmcc_ecp:war" />
+    </artifacts-to-build>
+  </component>
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/teletext/BossTeletextUtil.java" line="71" mnemonic="4" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f84a6b8c-d602-49e3-9271-faf683908d25" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/logs/WhiteDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/communication/HttpCommunicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/communication/HttpCommunicator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/communication/ICommunicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/communication/ICommunicator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/communication/JbossRemotingCommunicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/communication/JbossRemotingCommunicator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/communication/RemoteImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/communication/RemoteImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/dao/BaseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/dao/BaseDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/dao/ServiceCallerPrivilegeDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/dao/ServiceCallerPrivilegeDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/dao/service/ServiceConfigDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/dao/service/ServiceConfigDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/flow/works/WorkFlowFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/flow/works/WorkFlowFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/flow/works/chains/nodes/CallServiceNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/flow/works/chains/nodes/CallServiceNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/log/LInterfaceAccessLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/log/LInterfaceAccessLogger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/logs/BossRequestLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/logs/BossRequestLogger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/logs/LInterfaceAccessLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/logs/LInterfaceAccessLogger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/msg/MessageHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/msg/MessageHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/msg/RequestParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/msg/RequestParameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/msg/ServiceMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/msg/ServiceMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/BaseServiceInvocationResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/BaseServiceInvocationResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/ServiceExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/ServiceExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/client/XWECPLIClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/client/XWECPLIClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/client_impl/common/IAddedProductSubscriptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/client_impl/common/IAddedProductSubscriptionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/client_impl/common/IMobileAppPaymentSignVerificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/client_impl/common/IMobileAppPaymentSignVerificationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/client_impl/common/impl/AddedProductSubscriptionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/client_impl/common/impl/AddedProductSubscriptionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/client_impl/common/impl/CheckStandPaymentSignServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/client_impl/common/impl/CheckStandPaymentSignServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/client_impl/common/impl/OrdermarketingActivityNewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/client_impl/common/impl/OrdermarketingActivityNewServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/client_impl/common/impl/PhoneAppPaymentSignVerificationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/client_impl/common/impl/PhoneAppPaymentSignVerificationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/client_impl/common/impl/QryMemberOrdersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/client_impl/common/impl/QryMemberOrdersServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/client_impl/common/impl/QueryBalScoreServiceClientImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/client_impl/common/impl/QueryBalScoreServiceClientImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/client_impl/common/impl/QueryBusinessInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/client_impl/common/impl/QueryBusinessInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/client_impl/common/impl/QueryEquityBusinessDataServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/client_impl/common/impl/QueryEquityBusinessDataServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/invocation/BillQueryInvocation2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/invocation/BillQueryInvocation2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/invocation/ElectronicInvoiceDetailsInvocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/invocation/ElectronicInvoiceDetailsInvocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/invocation/QryBroadbandInvocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/invocation/QryBroadbandInvocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/invocation/QueryBillBalInvocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/invocation/QueryBillBalInvocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/invocation/QueryBusinessInvocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/invocation/QueryBusinessInvocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/invocation/QueryCurrentStreamInvocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/invocation/QueryCurrentStreamInvocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/invocation/QueryQueryEquityBusinessDataInvocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/invocation/QueryQueryEquityBusinessDataInvocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/invocation/QueryUserPushInvocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/invocation/QueryUserPushInvocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/pojo/DEL010001Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/pojo/DEL010001Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/pojo/DEL929206Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/pojo/DEL929206Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/pojo/GPRSFluxsMonth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/pojo/GPRSFluxsMonth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/pojo/Interests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/pojo/Interests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/pojo/QRY010002Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/pojo/QRY010002Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/pojo/QRY010018Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/pojo/QRY010018Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/pojo/QRY139139Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/pojo/QRY139139Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/pojo/QRY202002Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/pojo/QRY202002Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/pojo/QRY300010Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/pojo/QRY300010Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/pojo/QRY912114List.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/pojo/QRY912114List.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/pojo/QRY930019Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/pojo/DEL930019Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/pojo/ResultObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/pojo/ResultObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/pojo/ReturnInfoBeans.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/pojo/ReturnInfoBeans.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/pojo/RightList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/pojo/RightList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/pojo/SumsCorelist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/pojo/SumsCorelist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/server/RemotingClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/server/RemotingClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/teletext/BossTeletextUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/teletext/BossTeletextUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/DEL010001Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/DEL010001Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/DEL010022Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/DEL010022Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/DEL010028Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/DEL010028Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/DEL010029Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/DEL010029Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/DEL010030Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/DEL010030Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/DEL170108Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/DEL170108Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/DEL181228Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/DEL181228Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/DEL190520Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/DEL190520Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/DEL190523Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/DEL190523Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/DEL929206Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/DEL929206Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/DEL930019Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/DEL930019Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/PAY181114Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/PAY181114Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY010001Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY010001Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY010002Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY010002Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY010003Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY010003Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY010004Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY010004Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY010021Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY010021Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY010034Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY010034Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY010098Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY010098Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY020001Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY020001Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY020024Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY020024Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY040001Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY040001Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY040006Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY040006Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY040049Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY040049Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY040064Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY040064Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY040094Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY040094Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY040095Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY040095Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY040100Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY040100Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY040104Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY040104Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY040202Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY040202Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY040205Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY040205Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY080001Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY080001Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY139139Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY139139Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY161203Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY161203Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY170214Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY170214Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY170411Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY170411Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY170415Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY170415Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY170416Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY170416Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY170421Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY170421Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY170610Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY170610Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY170611Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY170611Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY170612Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY170612Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY180410Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY180410Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY180525Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY180525Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY180526Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY180526Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY180527Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY180527Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY180528Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY180528Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY180529Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY180529Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY180706Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY180706Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY180717Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY180717Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY180818Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY180818Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY180819Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY180819Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY180820Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY180820Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY181025Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY181025Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY181026Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY181026Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY181116Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY181116Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY181117Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY181117Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY181118Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY181118Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY181222Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY181222Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY181229Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY181229Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY181230Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY181230Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY181231Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY181231Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY190425Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY190425Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY190507Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY190507Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY191119Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY191119Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY191211Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY191211Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY199411Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY199411Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY199412Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY199412Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY200272Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY200272Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY200997Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY200997Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY200998Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY200998Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY200999Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY200999Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201000Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201000Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201001Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201001Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201002Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201002Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201513Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201513Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201612Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201612Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201704Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201704Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201997Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201997Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201999Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201999Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY202001Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY202001Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY202002Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY202002Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY210203Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY210203Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY219416Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY219416Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY219417Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY219417Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY219418Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY219418Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY241038Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY241038Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY300001Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY300001Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY300010Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY300010Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY300011Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY300011Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY300012Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY300012Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY300013Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY300013Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY420031Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY420031Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY420032Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY420032Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY420033Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY420033Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY420034Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY420034Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY420035Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY420035Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY500003Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY500003Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY820105Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY820105Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY912114Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY912114Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY912115Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY912115Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY912116Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY912116Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY912117Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY912117Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY920013Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY920013Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY920137Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY920137Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY920731Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY920731Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY929406Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY929406Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY930018Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY930018Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY931931Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY931931Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY940130Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY940130Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/transport/message/NioSocketClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/transport/message/NioSocketClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/util/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/util/StringUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/web/listener/ApplicationContextListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/web/listener/ApplicationContextListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/cfg/applicationContext-datasource.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cfg/applicationContext-datasource.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/cfg/applicationContext-log.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cfg/applicationContext-log.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/cfg/applicationContext-springredis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cfg/applicationContext-springredis.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/cfg/applicationContext-xwecp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cfg/applicationContext-xwecp.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/cfg/controllers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cfg/controllers.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.component.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.component.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/minaCfg.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/minaCfg.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/xwecp.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/xwecp.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@192.168.10.12" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="bendi" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="白名单" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="白名单" type="feb32156:DbDataSourceImpl" />
+        <item name="ECP27: schema" type="3abd1b6a:OraImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="白名单" type="feb32156:DbDataSourceImpl" />
+        <item name="ECP27: schema" type="3abd1b6a:OraImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="白名单" type="feb32156:DbDataSourceImpl" />
+        <item name="ECP27: schema" type="3abd1b6a:OraImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="T_ECP_WHITE: table" type="942f455b:OraImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="hnmcc_ecp" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY199411Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY820105Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY010098Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY180526Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY170214Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY190424Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="27" selection-start-line="27" selection-end-line="27" selection-end-column="79" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY190108Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="25" selection-start-line="25" selection-end-line="25" selection-end-column="87" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY181231Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY181229Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY181230Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="16" column="22" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Interface" />
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>100802</find>
+      <find>191212</find>
+      <find>202003</find>
+      <find>QRY241038</find>
+      <find>241038</find>
+      <find>930020</find>
+      <find>181115</find>
+      <find>OutResourceBean</find>
+      <find>OrderMarketing</find>
+      <find>QRY930020Result</find>
+      <find>QRY930020</find>
+      <find>190108</find>
+      <find>AddProdPrcId</find>
+      <find>productId·</find>
+      <find>productId</find>
+      <find>hnmcc_validproductid_200887</find>
+      <find>OTHER</find>
+      <find>offerTypeMap</find>
+      <find>IQueryValidProductIdService</find>
+      <find>929207</find>
+      <find>200604</find>
+      <find>Boss``</find>
+      <find>OfferId</find>
+      <find>t_channel_info</find>
+      <find>getChannelInfo</find>
+      <find>MessageHead</find>
+      <find>createRequestMessage</find>
+      <find>queryChannelInfo</find>
+      <find>宽带</find>
+      <find>个人调用ecp项目的账户或密码不正确</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>cp</replace>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>D:\workSpace\hnmcc_ecp\src\main\java\com\xwtech\xwecp\service\logic\pojo</dir>
+      <dir>D:\workSpace\hnmcc_ecp\src\main\java\com\xwtech\xwecp\service\logic\invocation</dir>
+    </dirStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/pojo/DEL200604Result.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/invocation/AddedValueCheckInvocation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/DEL010022Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/DEL200604Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/client_impl/common/impl/AddedValueCheckServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY040006Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY199411Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY010001Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY010002Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY010003Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY010004Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY940130Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY929406Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY920137Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY920013Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY912117Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY912116Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY912114Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY820105Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY500003Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY420035Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY420034Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY420033Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY420032Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY420031Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/client_impl/common/impl/QueryEquityBusinessDataServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY300013Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY300012Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY300011Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY241038Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY219418Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY219417Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY210203Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY202002Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY202001Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201704Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201612Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201513Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201002Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201001Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201000Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY200999Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY191119Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY190507Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY190425Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY190108Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY181231Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY181230Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY170214Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY010098Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY180526Test.java" />
+      </list>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\maven_home\maven" />
+        <option name="userSettingsFile" value="C:\Users\123\.m2\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="hnmcc_ecp Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="hnmcc_ecp Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="hnmcc_ecp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hnmcc_ecp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hnmcc_ecp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hnmcc_ecp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hnmcc_ecp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hnmcc_ecp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hnmcc_ecp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hnmcc_ecp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hnmcc_ecp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hnmcc_ecp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hnmcc_ecp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hnmcc_ecp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="xwecp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hnmcc_ecp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hnmcc_ecp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="xwecp" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="oracle&#10;mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592821015228" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="vcs.Subversion" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.xwtech.xwecp.service.logic.invocation" />
+      <recent name="com.xwtech.xwecp.service.logic.client_impl.common.impl" />
+      <recent name="com.xwtech.xwecp.service.logic.client_impl.common" />
+      <recent name="com.xwtech.xwecp.test" />
+      <recent name="com.xwtech.xwecp.service.logic.pojo" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workSpace\hnmcc_ecp\src\main\webapp\WEB-INF\lib" />
+      <recent name="D:\workSpace\hnmcc_ecp\src\main\java\com\xwtech\xwecp\util" />
+      <recent name="D:\workSpace\hnmcc_ecp\src\main\java\com\xwtech\xwecp\test" />
+      <recent name="D:\workSpace\hnmcc_ecp\src\main\java\com\xwtech\xwecp\msg" />
+      <recent name="D:\workSpace\hnmcc_ecp\src\main\java\com\xwtech\xwecp\logs" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.QRY180526Test">
+    <configuration name="QRY010098Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xwtech.xwecp.test.QRY010098Test" />
+      <module name="hnmcc_ecp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xwtech.xwecp.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QRY170214Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xwtech.xwecp.test.QRY170214Test" />
+      <module name="hnmcc_ecp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xwtech.xwecp.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QRY180526Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xwtech.xwecp.test.QRY180526Test" />
+      <module name="hnmcc_ecp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xwtech.xwecp.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QRY199411Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xwtech.xwecp.test.QRY199411Test" />
+      <module name="hnmcc_ecp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xwtech.xwecp.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QRY820105Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xwtech.xwecp.test.QRY820105Test" />
+      <module name="hnmcc_ecp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xwtech.xwecp.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="hnmcc_ecp []" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="hnmcc_ecp [clean,tomcat7:run]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tomcat 8.5.37" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.37" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="hnmcc_ecp:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/hnmcc_ecp_war" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_hnmcc_ecp" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="62329" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="hnmcc_ecp:war" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.QRY199411Test" />
+      <item itemvalue="Application.QRY820105Test" />
+      <item itemvalue="Application.QRY170214Test" />
+      <item itemvalue="Application.QRY010098Test" />
+      <item itemvalue="Application.QRY180526Test" />
+      <item itemvalue="Maven.hnmcc_ecp []" />
+      <item itemvalue="Maven.hnmcc_ecp [clean,tomcat7:run]" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.37" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.QRY180526Test" />
+        <item itemvalue="Application.QRY010098Test" />
+        <item itemvalue="Application.QRY170214Test" />
+        <item itemvalue="Application.QRY820105Test" />
+        <item itemvalue="Application.QRY199411Test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\123\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="C:\Users\123\Desktop\hnmcc_ecp_http\hnmcc_ecp" />
+          <option name="myCopyRoot" value="C:\Users\123\Desktop\hnmcc_ecp_http\hnmcc_ecp" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="C:\Users\123\Desktop\hnmcc_ecp_http\hnmcc_ecp" />
+          <option name="myCopyRoot" value="C:\Users\123\Desktop\hnmcc_ecp_http\hnmcc_ecp" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f84a6b8c-d602-49e3-9271-faf683908d25" name="Default Changelist" comment="" />
+      <created>1557217741180</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1557217741180</updated>
+      <workItem from="1557217745115" duration="14921000" />
+      <workItem from="1557286848619" duration="26000" />
+      <workItem from="1557366148381" duration="2909000" />
+      <workItem from="1557452360400" duration="51000" />
+      <workItem from="1557737584963" duration="1328000" />
+      <workItem from="1557820595090" duration="7537000" />
+      <workItem from="1557884602328" duration="3592000" />
+      <workItem from="1557903089613" duration="33000" />
+      <workItem from="1557972955680" duration="806000" />
+      <workItem from="1558074917630" duration="128000" />
+      <workItem from="1558077248011" duration="1781000" />
+      <workItem from="1558317895627" duration="6696000" />
+      <workItem from="1558345791348" duration="2250000" />
+      <workItem from="1558402634676" duration="4023000" />
+      <workItem from="1558424244392" duration="43000" />
+      <workItem from="1558424346322" duration="7604000" />
+      <workItem from="1558489114066" duration="33011000" />
+      <workItem from="1558629228973" duration="9774000" />
+      <workItem from="1558646550696" duration="340000" />
+      <workItem from="1558683688354" duration="420000" />
+      <workItem from="1558684350781" duration="1145000" />
+      <workItem from="1558920139027" duration="25000" />
+      <workItem from="1558925758085" duration="1479000" />
+      <workItem from="1558942253067" duration="3640000" />
+      <workItem from="1559007845611" duration="5352000" />
+      <workItem from="1559040580322" duration="403000" />
+      <workItem from="1559042815892" duration="1980000" />
+      <workItem from="1559048543038" duration="693000" />
+      <workItem from="1559201251272" duration="3767000" />
+      <workItem from="1559527231066" duration="2730000" />
+      <workItem from="1559532058609" duration="17312000" />
+      <workItem from="1560735043552" duration="477000" />
+      <workItem from="1564128734347" duration="2116000" />
+      <workItem from="1564541760057" duration="1592000" />
+      <workItem from="1564623084902" duration="60000" />
+      <workItem from="1564624657229" duration="2486000" />
+      <workItem from="1564642883650" duration="3031000" />
+      <workItem from="1564999853268" duration="676000" />
+      <workItem from="1565082395001" duration="4177000" />
+      <workItem from="1565140255921" duration="4355000" />
+      <workItem from="1565226433693" duration="1410000" />
+      <workItem from="1565574186598" duration="7639000" />
+      <workItem from="1565595491533" duration="39000" />
+      <workItem from="1565680363791" duration="8738000" />
+      <workItem from="1566200797566" duration="9939000" />
+      <workItem from="1566286622674" duration="3458000" />
+      <workItem from="1566304082181" duration="590000" />
+      <workItem from="1566315331364" duration="604000" />
+      <workItem from="1566370623967" duration="175000" />
+      <workItem from="1566372423772" duration="5339000" />
+      <workItem from="1566378272164" duration="1300000" />
+      <workItem from="1566785583674" duration="10820000" />
+      <workItem from="1566805859362" duration="108000" />
+      <workItem from="1566806052805" duration="3345000" />
+      <workItem from="1566821124318" duration="17062000" />
+      <workItem from="1567134766016" duration="57000" />
+      <workItem from="1567387595708" duration="22897000" />
+      <workItem from="1567578424317" duration="30171000" />
+      <workItem from="1567751750719" duration="9787000" />
+      <workItem from="1567993375808" duration="34497000" />
+      <workItem from="1568616690552" duration="34650000" />
+      <workItem from="1568791533062" duration="7708000" />
+      <workItem from="1568858390668" duration="30004000" />
+      <workItem from="1569202076761" duration="46922000" />
+      <workItem from="1569394488601" duration="35544000" />
+      <workItem from="1569720246952" duration="908000" />
+      <workItem from="1569724920442" duration="23069000" />
+      <workItem from="1570497693407" duration="98800000" />
+      <workItem from="1571033718114" duration="87367000" />
+      <workItem from="1571620935913" duration="64680000" />
+      <workItem from="1571883284823" duration="21474000" />
+      <workItem from="1572226210429" duration="89062000" />
+      <workItem from="1572830763918" duration="24141000" />
+      <workItem from="1573004279302" duration="60475000" />
+      <workItem from="1573435504294" duration="41552000" />
+      <workItem from="1573780313106" duration="8210000" />
+      <workItem from="1574040368666" duration="5948000" />
+      <workItem from="1574299573593" duration="20840000" />
+      <workItem from="1574645366198" duration="1281000" />
+      <workItem from="1574662569487" duration="51166000" />
+      <workItem from="1575251507964" duration="44011000" />
+      <workItem from="1575595041193" duration="6826000" />
+      <workItem from="1575771548842" duration="21377000" />
+      <workItem from="1575853543187" duration="53358000" />
+      <workItem from="1576027111354" duration="48474000" />
+      <workItem from="1576460537681" duration="7200000" />
+      <workItem from="1576545795269" duration="52800000" />
+      <workItem from="1576998144817" duration="1499000" />
+      <workItem from="1577063859999" duration="672000" />
+      <workItem from="1577084896259" duration="396000" />
+      <workItem from="1577091492724" duration="18800000" />
+      <workItem from="1577323284714" duration="32709000" />
+      <workItem from="1577669744332" duration="1004000" />
+      <workItem from="1577670828029" duration="1653000" />
+      <workItem from="1577687211997" duration="398000" />
+      <workItem from="1577758196775" duration="4294000" />
+      <workItem from="1577782642648" duration="3204000" />
+      <workItem from="1577931446946" duration="3217000" />
+      <workItem from="1577958884727" duration="2338000" />
+      <workItem from="1578014940087" duration="8721000" />
+      <workItem from="1578273958170" duration="12603000" />
+      <workItem from="1578620646238" duration="10007000" />
+      <workItem from="1578879620880" duration="6015000" />
+      <workItem from="1578902818077" duration="856000" />
+      <workItem from="1580696687561" duration="358000" />
+      <workItem from="1580957920795" duration="1463000" />
+      <workItem from="1580961473727" duration="29000" />
+      <workItem from="1580962243908" duration="25488000" />
+      <workItem from="1581585555025" duration="192000" />
+      <workItem from="1581658961239" duration="3041000" />
+      <workItem from="1581910722827" duration="109774000" />
+      <workItem from="1583114049971" duration="5248000" />
+      <workItem from="1583201222267" duration="16478000" />
+      <workItem from="1583290302572" duration="74396000" />
+      <workItem from="1583807178434" duration="2848000" />
+      <workItem from="1583825405984" duration="2494000" />
+      <workItem from="1583895160465" duration="36746000" />
+      <workItem from="1584352987321" duration="56437000" />
+      <workItem from="1584926384445" duration="91126000" />
+      <workItem from="1585531961141" duration="85435000" />
+      <workItem from="1585898899223" duration="5125000" />
+      <workItem from="1586224151122" duration="46011000" />
+      <workItem from="1586742845235" duration="15159000" />
+      <workItem from="1587000385033" duration="1684000" />
+      <workItem from="1587018910698" duration="2146000" />
+      <workItem from="1587104466748" duration="381000" />
+      <workItem from="1587346314514" duration="23346000" />
+      <workItem from="1587522472577" duration="10417000" />
+      <workItem from="1587605540413" duration="12192000" />
+      <workItem from="1587950105148" duration="30790000" />
+      <workItem from="1588127310356" duration="11354000" />
+      <workItem from="1588729692723" duration="29245000" />
+      <workItem from="1588908407694" duration="3823000" />
+      <workItem from="1588928520944" duration="2069000" />
+      <workItem from="1588988329943" duration="1997000" />
+      <workItem from="1589246918398" duration="293000" />
+      <workItem from="1589253399141" duration="8037000" />
+      <workItem from="1589336936645" duration="2362000" />
+      <workItem from="1589340711244" duration="241000" />
+      <workItem from="1589354395696" duration="1727000" />
+      <workItem from="1589360361142" duration="2807000" />
+      <workItem from="1589419716075" duration="3465000" />
+      <workItem from="1589425222602" duration="5709000" />
+      <workItem from="1589511679704" duration="15116000" />
+      <workItem from="1589766571070" duration="16430000" />
+      <workItem from="1589852924009" duration="406000" />
+      <workItem from="1589854224315" duration="111000" />
+      <workItem from="1589856103717" duration="2160000" />
+      <workItem from="1589862748650" duration="1236000" />
+      <workItem from="1589869296127" duration="258000" />
+      <workItem from="1589901929179" duration="2578000" />
+      <workItem from="1589938196735" duration="6545000" />
+      <workItem from="1590044741852" duration="375000" />
+      <workItem from="1590397234087" duration="1665000" />
+      <workItem from="1590462823205" duration="5223000" />
+      <workItem from="1590548911465" duration="3583000" />
+      <workItem from="1590629303284" duration="26098000" />
+      <workItem from="1590975026924" duration="1873000" />
+      <workItem from="1590996721789" duration="2728000" />
+      <workItem from="1591060957771" duration="9258000" />
+      <workItem from="1591146865843" duration="48700000" />
+      <workItem from="1591579631143" duration="29212000" />
+      <workItem from="1591760639594" duration="18830000" />
+      <workItem from="1592185903065" duration="2805000" />
+      <workItem from="1592188742620" duration="14623000" />
+      <workItem from="1592364480106" duration="2101000" />
+      <workItem from="1592445294576" duration="2353000" />
+      <workItem from="1592467047032" duration="1779000" />
+      <workItem from="1592795522572" duration="1866000" />
+      <workItem from="1592808538152" duration="403000" />
+      <workItem from="1592815737539" duration="5272000" />
+      <workItem from="1592875261154" duration="30000" />
+    </task>
+    <task id="LOCAL-00286">
+      <created>1591331494059</created>
+      <option name="number" value="00286" />
+      <option name="presentableId" value="LOCAL-00286" />
+      <option name="project" value="LOCAL" />
+      <updated>1591331494059</updated>
+    </task>
+    <task id="LOCAL-00287">
+      <created>1591331513653</created>
+      <option name="number" value="00287" />
+      <option name="presentableId" value="LOCAL-00287" />
+      <option name="project" value="LOCAL" />
+      <updated>1591331513654</updated>
+    </task>
+    <task id="LOCAL-00288">
+      <created>1591331529103</created>
+      <option name="number" value="00288" />
+      <option name="presentableId" value="LOCAL-00288" />
+      <option name="project" value="LOCAL" />
+      <updated>1591331529104</updated>
+    </task>
+    <task id="LOCAL-00289">
+      <created>1591331546071</created>
+      <option name="number" value="00289" />
+      <option name="presentableId" value="LOCAL-00289" />
+      <option name="project" value="LOCAL" />
+      <updated>1591331546071</updated>
+    </task>
+    <task id="LOCAL-00290">
+      <created>1591331559609</created>
+      <option name="number" value="00290" />
+      <option name="presentableId" value="LOCAL-00290" />
+      <option name="project" value="LOCAL" />
+      <updated>1591331559609</updated>
+    </task>
+    <task id="LOCAL-00291">
+      <created>1591331574710</created>
+      <option name="number" value="00291" />
+      <option name="presentableId" value="LOCAL-00291" />
+      <option name="project" value="LOCAL" />
+      <updated>1591331574710</updated>
+    </task>
+    <task id="LOCAL-00292">
+      <created>1591331593006</created>
+      <option name="number" value="00292" />
+      <option name="presentableId" value="LOCAL-00292" />
+      <option name="project" value="LOCAL" />
+      <updated>1591331593006</updated>
+    </task>
+    <task id="LOCAL-00293">
+      <created>1591331615508</created>
+      <option name="number" value="00293" />
+      <option name="presentableId" value="LOCAL-00293" />
+      <option name="project" value="LOCAL" />
+      <updated>1591331615508</updated>
+    </task>
+    <task id="LOCAL-00294">
+      <created>1591331702435</created>
+      <option name="number" value="00294" />
+      <option name="presentableId" value="LOCAL-00294" />
+      <option name="project" value="LOCAL" />
+      <updated>1591331702435</updated>
+    </task>
+    <task id="LOCAL-00295">
+      <created>1591331791009</created>
+      <option name="number" value="00295" />
+      <option name="presentableId" value="LOCAL-00295" />
+      <option name="project" value="LOCAL" />
+      <updated>1591331791009</updated>
+    </task>
+    <task id="LOCAL-00296">
+      <created>1591331804938</created>
+      <option name="number" value="00296" />
+      <option name="presentableId" value="LOCAL-00296" />
+      <option name="project" value="LOCAL" />
+      <updated>1591331804938</updated>
+    </task>
+    <task id="LOCAL-00297">
+      <created>1591331817359</created>
+      <option name="number" value="00297" />
+      <option name="presentableId" value="LOCAL-00297" />
+      <option name="project" value="LOCAL" />
+      <updated>1591331817359</updated>
+    </task>
+    <task id="LOCAL-00298">
+      <created>1591331829645</created>
+      <option name="number" value="00298" />
+      <option name="presentableId" value="LOCAL-00298" />
+      <option name="project" value="LOCAL" />
+      <updated>1591331829645</updated>
+    </task>
+    <task id="LOCAL-00299">
+      <created>1591331848583</created>
+      <option name="number" value="00299" />
+      <option name="presentableId" value="LOCAL-00299" />
+      <option name="project" value="LOCAL" />
+      <updated>1591331848583</updated>
+    </task>
+    <task id="LOCAL-00300">
+      <created>1591331867205</created>
+      <option name="number" value="00300" />
+      <option name="presentableId" value="LOCAL-00300" />
+      <option name="project" value="LOCAL" />
+      <updated>1591331867205</updated>
+    </task>
+    <task id="LOCAL-00301">
+      <created>1591331901105</created>
+      <option name="number" value="00301" />
+      <option name="presentableId" value="LOCAL-00301" />
+      <option name="project" value="LOCAL" />
+      <updated>1591331901106</updated>
+    </task>
+    <task id="LOCAL-00302">
+      <created>1591331916335</created>
+      <option name="number" value="00302" />
+      <option name="presentableId" value="LOCAL-00302" />
+      <option name="project" value="LOCAL" />
+      <updated>1591331916336</updated>
+    </task>
+    <task id="LOCAL-00303">
+      <created>1591331929663</created>
+      <option name="number" value="00303" />
+      <option name="presentableId" value="LOCAL-00303" />
+      <option name="project" value="LOCAL" />
+      <updated>1591331929663</updated>
+    </task>
+    <task id="LOCAL-00304">
+      <created>1591331949305</created>
+      <option name="number" value="00304" />
+      <option name="presentableId" value="LOCAL-00304" />
+      <option name="project" value="LOCAL" />
+      <updated>1591331949305</updated>
+    </task>
+    <task id="LOCAL-00305">
+      <created>1591331988116</created>
+      <option name="number" value="00305" />
+      <option name="presentableId" value="LOCAL-00305" />
+      <option name="project" value="LOCAL" />
+      <updated>1591331988117</updated>
+    </task>
+    <task id="LOCAL-00306">
+      <created>1591332001375</created>
+      <option name="number" value="00306" />
+      <option name="presentableId" value="LOCAL-00306" />
+      <option name="project" value="LOCAL" />
+      <updated>1591332001375</updated>
+    </task>
+    <task id="LOCAL-00307">
+      <created>1591332015068</created>
+      <option name="number" value="00307" />
+      <option name="presentableId" value="LOCAL-00307" />
+      <option name="project" value="LOCAL" />
+      <updated>1591332015068</updated>
+    </task>
+    <task id="LOCAL-00308">
+      <created>1591332035556</created>
+      <option name="number" value="00308" />
+      <option name="presentableId" value="LOCAL-00308" />
+      <option name="project" value="LOCAL" />
+      <updated>1591332035556</updated>
+    </task>
+    <task id="LOCAL-00309">
+      <created>1591332049462</created>
+      <option name="number" value="00309" />
+      <option name="presentableId" value="LOCAL-00309" />
+      <option name="project" value="LOCAL" />
+      <updated>1591332049462</updated>
+    </task>
+    <task id="LOCAL-00310">
+      <created>1591332078982</created>
+      <option name="number" value="00310" />
+      <option name="presentableId" value="LOCAL-00310" />
+      <option name="project" value="LOCAL" />
+      <updated>1591332078982</updated>
+    </task>
+    <task id="LOCAL-00311">
+      <created>1591332094355</created>
+      <option name="number" value="00311" />
+      <option name="presentableId" value="LOCAL-00311" />
+      <option name="project" value="LOCAL" />
+      <updated>1591332094355</updated>
+    </task>
+    <task id="LOCAL-00312">
+      <created>1591332107252</created>
+      <option name="number" value="00312" />
+      <option name="presentableId" value="LOCAL-00312" />
+      <option name="project" value="LOCAL" />
+      <updated>1591332107252</updated>
+    </task>
+    <task id="LOCAL-00313">
+      <created>1591332120440</created>
+      <option name="number" value="00313" />
+      <option name="presentableId" value="LOCAL-00313" />
+      <option name="project" value="LOCAL" />
+      <updated>1591332120440</updated>
+    </task>
+    <task id="LOCAL-00314">
+      <created>1591332134660</created>
+      <option name="number" value="00314" />
+      <option name="presentableId" value="LOCAL-00314" />
+      <option name="project" value="LOCAL" />
+      <updated>1591332134660</updated>
+    </task>
+    <task id="LOCAL-00315">
+      <created>1591332148495</created>
+      <option name="number" value="00315" />
+      <option name="presentableId" value="LOCAL-00315" />
+      <option name="project" value="LOCAL" />
+      <updated>1591332148495</updated>
+    </task>
+    <task id="LOCAL-00316">
+      <created>1591332186048</created>
+      <option name="number" value="00316" />
+      <option name="presentableId" value="LOCAL-00316" />
+      <option name="project" value="LOCAL" />
+      <updated>1591332186048</updated>
+    </task>
+    <task id="LOCAL-00317">
+      <created>1591332205633</created>
+      <option name="number" value="00317" />
+      <option name="presentableId" value="LOCAL-00317" />
+      <option name="project" value="LOCAL" />
+      <updated>1591332205633</updated>
+    </task>
+    <task id="LOCAL-00318">
+      <created>1591332303453</created>
+      <option name="number" value="00318" />
+      <option name="presentableId" value="LOCAL-00318" />
+      <option name="project" value="LOCAL" />
+      <updated>1591332303453</updated>
+    </task>
+    <task id="LOCAL-00319">
+      <created>1591332319020</created>
+      <option name="number" value="00319" />
+      <option name="presentableId" value="LOCAL-00319" />
+      <option name="project" value="LOCAL" />
+      <updated>1591332319020</updated>
+    </task>
+    <task id="LOCAL-00320">
+      <created>1591332333019</created>
+      <option name="number" value="00320" />
+      <option name="presentableId" value="LOCAL-00320" />
+      <option name="project" value="LOCAL" />
+      <updated>1591332333019</updated>
+    </task>
+    <task id="LOCAL-00321">
+      <created>1591332353377</created>
+      <option name="number" value="00321" />
+      <option name="presentableId" value="LOCAL-00321" />
+      <option name="project" value="LOCAL" />
+      <updated>1591332353377</updated>
+    </task>
+    <task id="LOCAL-00322">
+      <created>1591332370601</created>
+      <option name="number" value="00322" />
+      <option name="presentableId" value="LOCAL-00322" />
+      <option name="project" value="LOCAL" />
+      <updated>1591332370601</updated>
+    </task>
+    <task id="LOCAL-00323">
+      <created>1591332390478</created>
+      <option name="number" value="00323" />
+      <option name="presentableId" value="LOCAL-00323" />
+      <option name="project" value="LOCAL" />
+      <updated>1591332390478</updated>
+    </task>
+    <task id="LOCAL-00324">
+      <created>1591332433827</created>
+      <option name="number" value="00324" />
+      <option name="presentableId" value="LOCAL-00324" />
+      <option name="project" value="LOCAL" />
+      <updated>1591332433827</updated>
+    </task>
+    <task id="LOCAL-00325">
+      <created>1591332503196</created>
+      <option name="number" value="00325" />
+      <option name="presentableId" value="LOCAL-00325" />
+      <option name="project" value="LOCAL" />
+      <updated>1591332503196</updated>
+    </task>
+    <task id="LOCAL-00326">
+      <created>1591332560554</created>
+      <option name="number" value="00326" />
+      <option name="presentableId" value="LOCAL-00326" />
+      <option name="project" value="LOCAL" />
+      <updated>1591332560555</updated>
+    </task>
+    <task id="LOCAL-00327">
+      <created>1591332625861</created>
+      <option name="number" value="00327" />
+      <option name="presentableId" value="LOCAL-00327" />
+      <option name="project" value="LOCAL" />
+      <updated>1591332625861</updated>
+    </task>
+    <task id="LOCAL-00328">
+      <created>1591332642061</created>
+      <option name="number" value="00328" />
+      <option name="presentableId" value="LOCAL-00328" />
+      <option name="project" value="LOCAL" />
+      <updated>1591332642061</updated>
+    </task>
+    <task id="LOCAL-00329">
+      <created>1591332655059</created>
+      <option name="number" value="00329" />
+      <option name="presentableId" value="LOCAL-00329" />
+      <option name="project" value="LOCAL" />
+      <updated>1591332655059</updated>
+    </task>
+    <task id="LOCAL-00330">
+      <created>1591332680180</created>
+      <option name="number" value="00330" />
+      <option name="presentableId" value="LOCAL-00330" />
+      <option name="project" value="LOCAL" />
+      <updated>1591332680181</updated>
+    </task>
+    <task id="LOCAL-00331">
+      <created>1591332737494</created>
+      <option name="number" value="00331" />
+      <option name="presentableId" value="LOCAL-00331" />
+      <option name="project" value="LOCAL" />
+      <updated>1591332737494</updated>
+    </task>
+    <task id="LOCAL-00332">
+      <created>1591332753262</created>
+      <option name="number" value="00332" />
+      <option name="presentableId" value="LOCAL-00332" />
+      <option name="project" value="LOCAL" />
+      <updated>1591332753263</updated>
+    </task>
+    <task id="LOCAL-00333">
+      <created>1591332764826</created>
+      <option name="number" value="00333" />
+      <option name="presentableId" value="LOCAL-00333" />
+      <option name="project" value="LOCAL" />
+      <updated>1591332764826</updated>
+    </task>
+    <task id="LOCAL-00334">
+      <created>1591864689005</created>
+      <option name="number" value="00334" />
+      <option name="presentableId" value="LOCAL-00334" />
+      <option name="project" value="LOCAL" />
+      <updated>1591864689021</updated>
+    </task>
+    <option name="localTasksCounter" value="335" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Test_test - 2019.09.06 at 15h 02m 05s.xml">
+      <configuration name="Test.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Test_test - 2019.09.11 at 00h 22m 36s.xml">
+      <configuration name="Test.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Test_test - 2019.09.25 at 18h 07m 07s.xml">
+      <configuration name="Test.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_hnmcc_ecp - 2019.09.30 at 11h 12m 48s.xml">
+      <configuration name="All in hnmcc_ecp" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyTest_test - 2020.04.01 at 17h 51m 24s.xml">
+      <configuration name="MyTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyTest_test - 2020.04.01 at 17h 51m 43s.xml">
+      <configuration name="MyTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyTest_test - 2020.04.01 at 18h 12m 39s.xml">
+      <configuration name="MyTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyTest_test - 2020.04.01 at 18h 13m 41s.xml">
+      <configuration name="MyTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyTest_test - 2020.04.01 at 18h 13m 58s.xml">
+      <configuration name="MyTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyTest_test - 2020.04.01 at 18h 14m 17s.xml">
+      <configuration name="MyTest.test" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2374527000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.90877795" visible="true" weight="0.22768533" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.17162873" side_tool="true" weight="0.16414523" />
+      <window_info id="Web" order="7" sideWeight="0.09122203" side_tool="true" weight="0.25113463" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.4258189" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8835098" weight="0.5613748" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8388805" weight="0.5204583" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Spring" order="6" weight="0.3289689" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.7125567" weight="0.58428806" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.11649016" side_tool="true" weight="0.08510638" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4871407" weight="0.61047465" />
+      <window_info anchor="bottom" id="TODO" order="11" sideWeight="0.49924356" weight="0.30441898" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" sideWeight="0.49924356" weight="0.45335516" />
+      <window_info anchor="bottom" id="Database Changes" order="13" weight="0.20949264" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.2569558" />
+      <window_info anchor="bottom" id="Application Servers" order="15" sideWeight="0.49924356" weight="0.62520456" />
+      <window_info anchor="bottom" id="Database Console" order="16" sideWeight="0.49924356" weight="0.15875614" />
+      <window_info anchor="bottom" id="SVN Repositories" order="17" sideWeight="0.49924356" weight="0.10801964" />
+      <window_info active="true" anchor="bottom" id="SVN Properties" order="18" weight="0.8052373" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Maven" order="1" visible="true" weight="0.10514372" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.27836612" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.24962178" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.26096824" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Module Dependencies" order="9" weight="0.34341908" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.90877795" visible="true" weight="0.2322239" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.17162873" side_tool="true" weight="0.16414523" />
+      <window_info id="Web" order="7" sideWeight="0.09122203" side_tool="true" weight="0.25113463" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.4258189" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8835098" visible="true" weight="0.198036" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8388805" weight="0.492635" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Spring" order="6" weight="0.3289689" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.7125567" weight="0.58428806" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.11649016" side_tool="true" weight="0.08510638" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4871407" weight="0.23567921" />
+      <window_info anchor="bottom" id="TODO" order="11" sideWeight="0.49924356" weight="0.30441898" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" sideWeight="0.49924356" weight="0.45335516" />
+      <window_info anchor="bottom" id="Database Changes" order="13" weight="0.20949264" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.2569558" />
+      <window_info anchor="bottom" id="Application Servers" order="15" sideWeight="0.49924356" weight="0.62520456" />
+      <window_info anchor="bottom" id="Database Console" order="16" sideWeight="0.49924356" weight="0.15875614" />
+      <window_info anchor="bottom" id="SVN Repositories" order="17" sideWeight="0.49924356" weight="0.10801964" />
+      <window_info active="true" anchor="bottom" id="SVN Properties" order="18" weight="0.8052373" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.27836612" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24962178" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.12556732" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.022692889" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Module Dependencies" order="9" weight="0.34341908" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/DEL190520Test.java</url>
+          <line>36</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/client_impl/common/impl/GetPartnerManagerNumByPhoneServiceImpl.java</url>
+          <line>50</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/target/classes/com/xwtech/xwecp/teletext/BossTeletextUtil.class</url>
+          <line>175</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/msg/MessageHelper.java</url>
+          <line>192</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://D:/迅雷下载/新建文件夹/hnmcc_ecp_YX13F_20191107_increment_辛江锋_v1_统一支付查询接口/hnmcc_ecp/WEB-INF/classes/com/xwtech/xwecp/service/logic/invocation/MobileAppPaymentSignVerificationinvocation.class</url>
+          <line>43</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/invocation/QueryUserPushInvocation.java</url>
+          <line>23</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY170805Test.java</url>
+          <line>23</line>
+          <properties />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/client_impl/common/impl/QueryPointsDueServiceImpl.java</url>
+          <line>50</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/communication/RemoteImpl.java</url>
+          <line>753</line>
+          <properties />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/communication/RemoteImpl.java</url>
+          <line>476</line>
+          <properties />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/client_impl/common/impl/QueryBillBalServiceClientImpl.java</url>
+          <line>21</line>
+          <properties />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/client_impl/common/impl/QueryMonthlyTrafficServiceImpl.java</url>
+          <line>23</line>
+          <properties />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/communication/RemoteImpl.java</url>
+          <line>437</line>
+          <properties />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/client_impl/common/impl/OrdermarketActivityServiceImpl.java</url>
+          <line>63</line>
+          <properties />
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/dao/ServiceCallerPrivilegeDAOImpl.java</url>
+          <line>99</line>
+          <properties />
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/client_impl/common/impl/ValueAddedProductOrderServiceImpl.java</url>
+          <line>30</line>
+          <properties />
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/flow/works/chains/nodes/CheckAccessPrivilegeNode.java</url>
+          <line>25</line>
+          <properties />
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY912116Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-38">
+          <caret line="38" column="30" lean-forward="true" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY912114Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY500003Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY420035Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="17" column="3" lean-forward="true" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY420034Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5">
+          <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY420033Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY420032Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY420031Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/client_impl/common/impl/QueryEquityBusinessDataServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="27" column="51" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY300013Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/service/logic/client_impl/common/impl/QueryCustomerServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="17" column="54" lean-forward="true" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY300012Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="43" column="74" lean-forward="true" selection-start-line="43" selection-start-column="74" selection-end-line="43" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY300011Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY300010Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-703">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY241038Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY219418Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="24" selection-start-line="24" selection-end-line="24" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY219416Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY219417Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="25" selection-start-line="25" selection-end-line="25" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY210203Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY202003Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY202002Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY202001Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY202000Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-181">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201999Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201998Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201997Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201704Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="25" selection-start-line="25" selection-end-line="25" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201612Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="34" column="62" lean-forward="true" selection-start-line="34" selection-start-column="62" selection-end-line="34" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201514Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="46" column="36" lean-forward="true" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201512Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-608">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201513Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="27" selection-start-line="27" selection-end-line="27" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201002Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201001Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY201000Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-285">
+          <caret line="18" column="44" lean-forward="true" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY200999Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-133">
+          <caret line="20" column="87" selection-start-line="20" selection-start-column="87" selection-end-line="20" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY200998Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-266">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY200997Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY200273Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY191119Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY190507Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="31" column="37" lean-forward="true" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY190425Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY199411Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY820105Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY010098Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY170214Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY190424Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="27" selection-start-line="27" selection-end-line="27" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY190108Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="25" selection-start-line="25" selection-end-line="25" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY181231Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY181229Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY181230Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xwtech/xwecp/test/QRY180526Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>hnmcc_ecp:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>hnmcc_ecp</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.alibaba:fastjson:1.2.32</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

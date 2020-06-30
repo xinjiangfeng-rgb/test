@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="
+            http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+	<bean id="logConfig" class="com.xwtech.xwecp.util.PropertiesConfiguration" scope="singleton">
+		<property name="config">
+			<props>
+				<prop key="cdrDirect2DB">${log.cdrDirect2DB}</prop>
+				<prop key="isRecordRight">${log.isrecord_right}</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="service_impl" class="com.xwtech.xwecp.util.PropertiesConfiguration" scope="singleton">
+		<property name="config">
+			<props>
+				<prop key="pojoPackage">${boss.evaluate.pojoPackage}</prop>
+				<prop key="extensionClassPackage">${boss.evaluate.extensionClassPackage}</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean name="accessIdGenerator" class="com.xwtech.xwecp.msg.SequenceGenerator" scope="singleton">
+		<constructor-arg value="S${platform.appId}{date}"></constructor-arg>
+		<constructor-arg value="${platform.sequence.begin}"></constructor-arg>
+		<constructor-arg value="${platform.sequence.end}"></constructor-arg>
+	</bean>
+
+	<bean name="bossRequestIdGenerator" class="com.xwtech.xwecp.msg.SequenceGenerator" scope="singleton">
+		<constructor-arg value="B${platform.appId}{date}"></constructor-arg>
+		<constructor-arg value="${platform.sequence.begin}"></constructor-arg>
+		<constructor-arg value="${platform.sequence.end}"></constructor-arg>
+	</bean>
+
+	<bean name="orderIdGenerator" class="com.xwtech.xwecp.msg.OrderIdGenerator" scope="singleton">
+		<constructor-arg value="B{date}"></constructor-arg>
+		<constructor-arg value="${platform.sequence.begin}"></constructor-arg>
+		<constructor-arg value="${platform.sequence.end}"></constructor-arg>
+	</bean>
+
+	<bean name="orderMarketIdGenerator" class="com.xwtech.xwecp.msg.OrderMarketIdGenerator" scope="singleton">
+		<constructor-arg value="M{date}"></constructor-arg>
+		<constructor-arg value="${platform.sequence.begin}"></constructor-arg>
+		<constructor-arg value="${platform.sequence.end}"></constructor-arg>
+	</bean>
+
+
+	<!--<bean name="logDAO" class="com.xwtech.xwecp.log.LogDAOImpl"-->
+		<!--scope="singleton">-->
+		<!--<property name="jdbcTemplate" ref="jdbcTemplate" />-->
+		<!--<property name="cache" ref="cache"/>-->
+	<!--</bean>-->
+
+</beans>

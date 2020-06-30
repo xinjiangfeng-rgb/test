@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+<context:component-scan base-package="com.xwtech.xwecp"></context:component-scan>
+<!-- 启用spring mvc 注解 -->
+	<!--<context:annotation-config/>-->
+	<!--&lt;!&ndash; 设置使用注解的类所在的jar包 &ndash;&gt;-->
+	<!--<context:component-scan base-package="com.xwtech.xwecp.web.action.*">-->
+		<!--<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>-->
+        <!--<context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.RestController"/>-->
+
+    <!--</context:component-scan>-->
+
+
+	<!--<bean id="paraMethodResolver" -->
+    <!--class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">-->
+    <!--<property name="paramName">-->
+    <!--<value>method</value>-->
+    <!--</property>-->
+    <!--<property name="defaultMethodName">-->
+    <!--<value>defaultHandle</value>-->
+    <!--</property>-->
+    <!--</bean>-->
+
+	<!--<bean name="/xwecp.do" class="com.xwtech.xwecp.web.action.ServiceInvocationAction" init-method="init">-->
+		<!--&lt;!&ndash;<property name="methodNameResolver" ref="paraMethodResolver" />&ndash;&gt;-->
+		<!--&lt;!&ndash;<property name="serviceExecutor" ref="serviceExecutor"/>&ndash;&gt;-->
+		<!--<property name="charset" value="UTF-8"></property>-->
+	<!--</bean>-->
+</beans>

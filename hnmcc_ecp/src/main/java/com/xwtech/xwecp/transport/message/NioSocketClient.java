@@ -1,0 +1,344 @@
+package com.xwtech.xwecp.transport.message;
+
+import com.xwtech.xwecp.communication.transport.ResponseMessageQueue;
+import com.xwtech.xwecp.msg.RequestParameter;
+import com.xwtech.xwecp.transport.handler.NioClientIOHandler;
+import com.xwtech.xwecp.transport.keepalive.ClientKeepAliveFactoryImpl;
+import com.xwtech.xwecp.transport.util.ConnectStateEnum;
+import com.xwtech.xwecp.transport.util.MergeTeletext;
+import com.xwtech.xwecp.transport.util.NioClientConfig;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.mina.core.RuntimeIoException;
+import org.apache.mina.core.filterchain.DefaultIoFilterChainBuilder;
+import org.apache.mina.core.future.ConnectFuture;
+import org.apache.mina.core.session.IdleStatus;
+import org.apache.mina.core.session.IoSession;
+import org.apache.mina.filter.codec.ProtocolCodecFilter;
+import org.apache.mina.filter.codec.textline.TextLineCodecFactory;
+import org.apache.mina.filter.keepalive.KeepAliveFilter;
+import org.apache.mina.filter.keepalive.KeepAliveRequestTimeoutHandler;
+import org.apache.mina.transport.socket.nio.NioSocketConnector;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.net.InetAddress;
+import java.net.InetSocketAddress;
+import java.nio.charset.Charset;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Vector;
+
+/**
+ * 单个socket连接(使用mina的连接机制)
+ * @author Administrator
+ *
+ */
+public class NioSocketClient{
+
+	private static final Logger logger = LoggerFactory.getLogger(NioSocketClient.class);
+	private NioSocketConnector connector;
+	private IoSession session;
+	private NioClientConfig config = NioClientConfig.getInstance();
+	public ConnectStateEnum constate;
+	public Vector<String> sendMsgList = new Vector<String>(0);  //发送队列
+	
+	public NioSocketClient(){
+		constate = ConnectStateEnum.NO_CONNECT;
+	}
+	
+	//发送报文
+	public void sendMsg(String msg){
+		addSendMsg(msg);
+		logger.info("++++++++NioClient++++++[ sendmsg|currentThread|sendMsgListSize ]"+msg+"|"+Thread.currentThread().getName()+"|"+sendMsgList.size());
+		session.write(msg);
+	}
+	
+	//接收报文还从之前的中获取--ResponseMessageQueue.getInstance().getMsg(key);
+	//在NioClientIOHandler中messageReceived方法中存储了响应报文
+	
+	/**
+	 * 客户端初始化,并建立连接
+	 * @return
+	 */
+	public boolean init(){
+		boolean result = false;
+		try{
+			boolean connBo = initAndConnect();//建连
+			boolean loginBo = getLoginMessage();//登录
+			if(connBo==true && loginBo==true){
+				result = true;
+			}
+			//如果连接成功但是登录失败，把连接断掉,mina客户端销毁掉(关掉文件句柄)
+			if(connBo==true && loginBo==false){
+				close();
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
+	public boolean initAndConnect(){
+		boolean result = false;
+		try{
+			//1.初始化客户端
+			if(connector==null){
+				//Create TCP/IP connection
+				connector = new NioSocketConnector();
+				DefaultIoFilterChainBuilder chain = connector.getFilterChain();
+		        
+				//日志过滤器
+				//connector.getFilterChain().addLast("logger", new LoggingFilter());//该过滤器加入到整个通信的过滤链中
+				//创建发送接收数据的过滤器,过滤器中对发送和接收的报文进行编码和解码,对发送和接受的数据用GBK编码，并且以MNF标记一条请求的结尾
+				TextLineCodecFactory tlFactory = new TextLineCodecFactory(Charset.forName("GBK"),"MNF","MNF");
+				tlFactory.setDecoderMaxLineLength(2048000);
+				chain.addLast("codec", new ProtocolCodecFilter(tlFactory));
+				
+				//心跳过滤器
+				//实例化一个  KeepAliveFilter  过滤器，传入 KeepAliveMessageFactory引用，IdleStatus参数为 READER_IDLE ,
+				//及表明如果当前连接的读通道空闲的时候在指定的时间间隔getRequestInterval后发送出心跳请求，以及发出Idle事件。 
+				//KeepAliveRequestTimeoutHandler设置为CLOS表明，当发出的心跳请求在规定时间内没有接受到反馈的时候则调用CLOSE方式 关闭连接
+				ClientKeepAliveFactoryImpl ckafi = new ClientKeepAliveFactoryImpl();
+				KeepAliveFilter kaf = new KeepAliveFilter(ckafi, IdleStatus.READER_IDLE,KeepAliveRequestTimeoutHandler.CLOSE);
+				kaf.setForwardEvent(true);//继续调用 IoHandlerAdapter 中的 sessionIdle时间
+				kaf.setRequestInterval(config.getHeartInterval());//设置当连接的读取通道空闲的时候，心跳包请求时间间隔
+				kaf.setRequestTimeout(config.getHeartTimeout());//设置心跳包请求后 等待反馈超时时间。 超过该时间后则调用KeepAliveRequestTimeoutHandler.CLOSE
+				chain.addLast("heart", kaf);//该过滤器加入到整个通信的过滤链中
+				
+		        connector.setHandler(new NioClientIOHandler(this));   
+		        //SocketSessionConfig dcfg = (SocketSessionConfig) connector.getSessionConfig();
+		        //这个方法设置读取缓冲的字节数，但一般不需要调用这个方法，因为IoProcessor 会自动调整缓冲的大小。
+		        //你可以调用setMinReadBufferSize()、setMaxReadBufferSize()方法，这样无论IoProcessor 无论如何自动调整，都会在你指定的区间
+		        //dcfg.setMaxReadBufferSize(Integer.MAX_VALUE);
+		        //dcfg.setMinReadBufferSize(Integer.MIN_VALUE);
+		        //这个方法设置关联在通道上的读、写或者是读写事件在指定时间内未发生，该通道就进入空闲状态。一旦调用这个方法，则每隔idleTime 都会回调过滤器、IoHandler 中的sessionIdle()方法
+		        //dcfg.setIdleTime(IdleStatus.READER_IDLE, config.getCheckReSendMs());
+			}
+			//2.建立连接
+			if(session==null){
+				ConnectFuture connFuture = connector.connect(
+		        		new InetSocketAddress(InetAddress.getByName(config.getHost()),
+		        				config.getPort()));
+		        connFuture.awaitUninterruptibly();
+				/*if(connFuture.isDone()){
+					if(!connFuture.isConnected()){
+						logger.info("********建立连接失败，释放资源***********"+config.getHost()+"|"+config.getPort());
+						connector.dispose();
+					}
+				}*/
+				if(connFuture.isDone()) {
+					if (connFuture.isConnected()) {
+						session = connFuture.getSession();
+						constate = ConnectStateEnum.CONNECTED;
+						result = true;
+					}else{
+						constate = ConnectStateEnum.NO_CONNECT;
+						result = false;
+					}
+				}
+			}
+		}catch(RuntimeIoException rex){
+			rex.printStackTrace();
+			logger.error(rex.getMessage(), rex);
+			result = false;
+		}catch(Exception ex){
+			ex.printStackTrace();
+			logger.error(ex.getMessage(), ex);
+			result = false;
+		}
+		return result;
+	}
+	
+	//发送鉴权报文并解析响应报文
+	public boolean getLoginMessage(){
+		boolean result = false;
+		//发送认证报文
+    	List<RequestParameter> param = new ArrayList<RequestParameter>();
+    	String temp = "MHF${request_seq}100502HNYD00XZT01 ${request_time}009    139     FFFF                                          FFFFFFFFYzzzzXBZT${t}r48<Q6MNF";
+    	String message = MergeTeletext.mergeTeletext(temp, param);
+    	//String message="MHF2009071605419115100502HNYD00XZT01 20090716054127008    139     FFFF                                          FFFFFFFFYzzzzXBZT r48<Q6MNF";
+//    	logger.info("++++++++NioClient++++++[发送认证消息]"+message);
+
+		if(session!=null){
+			session.write(message);
+
+		}
+
+    	
+		String key = new String(message.getBytes(), 0, 25);
+		String rspMsg = null;
+		int count = 0;
+		int whileCount = 20;
+		while (count < whileCount) {
+			rspMsg = ResponseMessageQueue.getInstance().getMsg(key);
+			if (StringUtils.isEmpty(rspMsg)) {
+				count++;
+				try {
+					Thread.sleep(100);
+				} catch (InterruptedException e) {
+					logger.error("******等待CRM消息异常********", e);
+				}
+				continue;
+			}
+			break;
+		}
+		
+		if(null == rspMsg || "".equals(rspMsg)){
+			result = false;
+		}else{
+			//获取CRM执行结果
+            String resCode = new String(rspMsg.getBytes(),66,4);
+            if("0000".endsWith(resCode)){
+//            	logger.info("建连和鉴权成功"+connector.isActive()+"|"+session.getId());
+            	result = true;
+            }
+		}
+		return result;
+	}
+	
+	//关闭连接,销毁句柄
+	public boolean close(){
+		try{
+			sendMsgList.removeAllElements();
+			
+			if(session!=null){
+				session.close(true);
+//				logger.info("关闭连接session");
+			}
+			if(connector!=null){
+				connector.dispose(true);
+//				logger.info("销毁mina客户端(句柄)");
+			}
+			return true;
+		}catch(Exception ex){
+//			logger.error("退出失败!",ex);
+			return false;
+		}finally{
+			constate = ConnectStateEnum.NO_CONNECT;
+		}
+	}
+
+	//关闭连接
+	public boolean closeSession(){
+		try{
+			sendMsgList.removeAllElements();
+
+			if(session!=null){
+				session.close(true);
+//				logger.info("关闭连接session");
+			}
+			return true;
+		}catch(Exception ex){
+			logger.error("退出失败!",ex);
+			return false;
+		}
+	}
+
+	/**
+	 * 在队列中添加消息
+	 * @param spSendinfoBuffer
+	 */
+	public boolean addSendMsg(String sendMessage){
+		synchronized(sendMsgList){
+			sendMsgList.add(sendMessage);
+			return true;
+		}
+	}
+	
+	/**
+	 * 移除队列中消息
+	 * @param spSendinfoBuffer
+	 */
+	public boolean delSendMsg(String sendMessage){
+		synchronized(sendMsgList){
+			sendMsgList.remove(sendMessage);
+			return true;
+		}
+	}
+	
+	
+	
+	public ConnectStateEnum getConstate() {
+		return constate;
+	}
+
+	public void setConstate(ConnectStateEnum constate) {
+		this.constate = constate;
+	}
+
+	public void pringStr(String str){
+		logger.info(str+connector.isActive()+"||"+connector.isDisposed());
+	}
+
+
+	//重连
+	//1.cannotuse中的socket都已经关闭并销毁mina客户端，重连的话需要新建客户端并发起重连和鉴权
+	//2.canuse中的连接断掉了，只需要重连和鉴权
+	public boolean reConnect(){
+		boolean result = false;
+		try{
+			/*if(connector.isDisposed()){
+				logger.info("***********yjqcanuse****重连的时候连接已关闭，mina客户端已销毁，需要重新创建，并连接和鉴权");
+				connector = new NioSocketConnector();
+				DefaultIoFilterChainBuilder chain = connector.getFilterChain();
+				//日志过滤器
+				//connector.getFilterChain().addLast("logger", new LoggingFilter());//该过滤器加入到整个通信的过滤链中
+				//创建发送接收数据的过滤器,过滤器中对发送和接收的报文进行编码和解码,对发送和接受的数据用GBK编码，并且以MNF标记一条请求的结尾
+				TextLineCodecFactory tlFactory = new TextLineCodecFactory(Charset.forName("GBK"),"MNF","MNF");
+				tlFactory.setDecoderMaxLineLength(2048000);
+				chain.addLast("codec", new ProtocolCodecFilter(tlFactory));
+				//心跳过滤器
+				//实例化一个  KeepAliveFilter  过滤器，传入 KeepAliveMessageFactory引用，IdleStatus参数为 READER_IDLE ,
+				//及表明如果当前连接的读通道空闲的时候在指定的时间间隔getRequestInterval后发送出心跳请求，以及发出Idle事件。
+				//KeepAliveRequestTimeoutHandler设置为CLOS表明，当发出的心跳请求在规定时间内没有接受到反馈的时候则调用CLOSE方式 关闭连接
+				ClientKeepAliveFactoryImpl ckafi = new ClientKeepAliveFactoryImpl();
+				KeepAliveFilter kaf = new KeepAliveFilter(ckafi, IdleStatus.READER_IDLE,KeepAliveRequestTimeoutHandler.CLOSE);
+				kaf.setForwardEvent(true);//继续调用 IoHandlerAdapter 中的 sessionIdle时间
+				kaf.setRequestInterval(config.getHeartInterval());//设置当连接的读取通道空闲的时候，心跳包请求时间间隔
+				kaf.setRequestTimeout(config.getHeartTimeout());//设置心跳包请求后 等待反馈超时时间。 超过该时间后则调用KeepAliveRequestTimeoutHandler.CLOSE
+				chain.addLast("heart", kaf);//该过滤器加入到整个通信的过滤链中
+				connector.setHandler(new NioClientIOHandler(this));
+
+				ConnectFuture connFuture = connector.connect(
+						new InetSocketAddress(InetAddress.getByName(config.getHost()),
+								config.getPort()));
+				connFuture.awaitUninterruptibly();
+				if(connFuture.isDone()) {
+					if (connFuture.isConnected()) {
+						session = connFuture.getSession();
+						constate = ConnectStateEnum.CONNECTED;
+						result = true;
+					}else{
+						constate = ConnectStateEnum.NO_CONNECT;
+						result = false;
+					}
+				}
+			}else{*/
+//				logger.info("***********yjqcanuse****重连的时候连接已关闭，mina客户端未被销毁，只需重新连接和鉴权即可");
+				ConnectFuture connFuture = connector.connect(
+						new InetSocketAddress(InetAddress.getByName(config.getHost()),
+								config.getPort()));
+				connFuture.awaitUninterruptibly();
+				if(connFuture.isDone()) {
+					if (connFuture.isConnected()) {
+						session = connFuture.getSession();
+						constate = ConnectStateEnum.CONNECTED;
+						result = true;
+					}else{
+						constate = ConnectStateEnum.NO_CONNECT;
+						result = false;
+					}
+				}
+			/*}*/
+		}catch(RuntimeIoException rex){
+			rex.printStackTrace();
+			logger.error(rex.getMessage(), rex);
+			result = false;
+		}catch(Exception ex){
+			ex.printStackTrace();
+			logger.error(ex.getMessage(), ex);
+			result = false;
+		}
+		return result;
+	}
+}

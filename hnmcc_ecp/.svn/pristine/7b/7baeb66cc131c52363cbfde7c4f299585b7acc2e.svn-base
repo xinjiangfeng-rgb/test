@@ -1,0 +1,25 @@
+package com.xwtech.xwecp.service.logic.pojo;
+
+import com.xwtech.xwecp.service.BaseServiceInvocationResult;
+
+public class QRY139139Result extends BaseServiceInvocationResult {
+
+    private String isSuccess;
+    private String qryType;
+
+    public String getIsSuccess() {
+        return isSuccess;
+    }
+
+    public void setIsSuccess(String isSuccess) {
+        this.isSuccess = isSuccess;
+    }
+
+    public String getQryType() {
+        return qryType;
+    }
+
+    public void setQryType(String qryType) {
+        this.qryType = qryType;
+    }
+}

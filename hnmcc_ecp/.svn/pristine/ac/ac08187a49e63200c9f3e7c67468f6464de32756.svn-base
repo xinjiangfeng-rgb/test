@@ -1,0 +1,69 @@
+package com.xwtech.xwecp.service.logic.pojo;
+
+import com.xwtech.xwecp.service.BaseServiceInvocationResult;
+
+public class DEL190123Result  extends BaseServiceInvocationResult {
+
+
+    /***
+     * 发票信息
+     */
+    private String billInfo;
+    /***
+     * 流水号
+     */
+    private String doneCode;
+    /***
+     * 电话号码
+     */
+    private String svcNum;
+    /***
+     * 产品名称
+     */
+    private String prodPrcName;
+    /***
+     * 确认标志
+     */
+    private String confirmFlag;
+
+
+    public String getBillInfo() {
+        return billInfo;
+    }
+
+    public void setBillInfo(String billInfo) {
+        this.billInfo = billInfo;
+    }
+
+    public String getDoneCode() {
+        return doneCode;
+    }
+
+    public void setDoneCode(String doneCode) {
+        this.doneCode = doneCode;
+    }
+
+    public String getSvcNum() {
+        return svcNum;
+    }
+
+    public void setSvcNum(String svcNum) {
+        this.svcNum = svcNum;
+    }
+
+    public String getProdPrcName() {
+        return prodPrcName;
+    }
+
+    public void setProdPrcName(String prodPrcName) {
+        this.prodPrcName = prodPrcName;
+    }
+
+    public String getConfirmFlag() {
+        return confirmFlag;
+    }
+
+    public void setConfirmFlag(String confirmFlag) {
+        this.confirmFlag = confirmFlag;
+    }
+}

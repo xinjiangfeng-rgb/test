@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="
+            http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+	<!--jedisPool配置-->
+	<bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+		<property name="maxTotal" value="${spring.redis.maxActive}"/>
+		<property name="maxIdle" value="${spring.redis.maxIdle}"/>
+		<property name="maxWaitMillis" value="${spring.redis.maxWaitMillis}"/>
+		<property name="testOnBorrow" value="${spring.redis.testOnBorrow}"/>
+	</bean>
+
+	<bean id="jedisPool" class="redis.clients.jedis.JedisPool" destroy-method="destroy">
+		<constructor-arg index="0" ref="jedisPoolConfig"/>
+		<constructor-arg index="1" value="${spring.redis.ip}" type="java.lang.String"/>
+		<constructor-arg index="2" value="${spring.redis.port}" type="int"/>
+		<constructor-arg index="3" value="${spring.redis.timeout}" type="int"/>
+		<!--<constructor-arg index="4" value="${redis.password}" type="java.lang.String"/>-->
+	</bean>
+
+	<!--数据一致性缓存service-->
+	<bean id="redisService" class="com.xwtech.xwecp.Jedis.RedisService">
+		<constructor-arg index="0" ref="jedisPool"></constructor-arg>
+	</bean>
+
+
+	<!--jedisPool配置-->
+	<bean id="jedisPoolConfig2" class="redis.clients.jedis.JedisPoolConfig">
+		<property name="maxTotal" value="${spring.redis.maxActive1}"/>
+		<property name="maxIdle" value="${spring.redis.maxIdle1}"/>
+		<property name="maxWaitMillis" value="${spring.redis.maxWaitMillis1}"/>
+		<property name="testOnBorrow" value="${spring.redis.testOnBorrow1}"/>
+
+	</bean>
+
+	<bean id="jedisPool2" class="redis.clients.jedis.JedisPool" destroy-method="destroy">
+		<constructor-arg index="0" ref="jedisPoolConfig2"/>
+		<constructor-arg index="1" value="${spring.redis.ip1}" type="java.lang.String"/>
+		<constructor-arg index="2" value="${spring.redis.port1}" type="int"/>
+		<constructor-arg index="3" value="${spring.redis.timeout1}" type="int"/>
+		<!--<constructor-arg index="4" value="${redis.password}" type="java.lang.String"/>-->
+	</bean>
+
+	<bean id="redisServiceForSty" class="com.xwtech.xwecp.Jedis.RedisServiceForSty">
+		<constructor-arg index="0" ref="jedisPool2"></constructor-arg>
+	</bean>
+
+
+	<!-- redis配置信息 -->
+	<bean name="cache" class=" com.xwtech.xwecp.Jedis.RedisClientNew" scope="singleton" init-method="init" >
+		<property name="host" value="${redis.host}"></property>
+		<property name="port" value="${redis.port}"></property>
+		<!--<property name="password" value="${redis.password}"></property>-->
+	</bean>
+</beans>

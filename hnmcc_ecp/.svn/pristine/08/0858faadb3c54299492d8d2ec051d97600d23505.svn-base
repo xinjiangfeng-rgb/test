@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Properties>
+        <!--定义变量-->
+        <Property name="filename">/webapp/logs/hnmcc_ecp/ecp.log</Property>
+        <Property name="ssoLog">/webapp/logs/hnmcc_ecp/ecpLog.log</Property>
+        <Property name="messagefile">/webapp/log/messageRequest/tomcat2</Property>
+
+    </Properties>
+    <Appenders>
+        <!--控制台输出-->
+        <Console name="Console">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %l - %msg%n"/>
+        </Console>
+        <!--入文件-->
+        <RollingFile name="RollingFile" fileName="${filename}"
+                     filePattern="/webapp/logs/hnmcc_ecp/${date:yyyy-MM}/sso-%d{yyyy-MM-dd}.log.zip">
+            <PatternLayout pattern="%d %-5level [%t]%l - %msg%n"/>
+            <!--输出INFO级别-->
+            <ThresholdFilter level="WARN" onMatch="DENY" onMismatch="NEUTRAL"/>
+            <Policies>
+                <!--每天生成一个文件-->
+                <TimeBasedTriggeringPolicy modulate="true" interval="1"/>
+            </Policies>
+            <!--压缩采用最快的速度-->
+            <DefaultRolloverStrategy compressionLevel="1">
+                <Delete basePath="${baseDir}" maxDepth="2">
+                    <IfFileName glob="*/ecp-*.log.zip"/>
+                    <IfLastModified age="90d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+        <!--入es中-->
+        <RollingFile name="ecpLog" fileName="${ecpLog}"
+                     filePattern="/webapp/logs/hnmcc_ecp/${date:yyyy-MM}/ecpLog-%d{yyyy-MM-dd}.log.zip">
+            <filters>
+                <MarkerFilter marker="KF_ECPDB" onMatch="ACCEPT" onMismatch="DENY"/>
+            </filters>
+            <Policies>
+                <!--每天生成一个文件-->
+                <TimeBasedTriggeringPolicy modulate="true" interval="1"/>
+                <!--超过这个大小，就会生成一个-i的文件-->
+                <!--<SizeBasedTriggeringPolicy size="250MB"/>-->
+            </Policies>
+            <!--当前目录最多支持当天最多20个压缩文件，压缩采用最快的速度-->
+            <DefaultRolloverStrategy compressionLevel="1">
+                <Delete basePath="${baseDir}" maxDepth="2">
+                    <IfFileName glob="*/ecpLog-*.log.zip"/>
+                    <IfLastModified age="120d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+        <!--日志直接入kafka-->
+        <Kafka name="Kafka" topic="ecp-log-topic">
+            <filters>
+                <!--只输出KF标记的日志-->
+                <MarkerFilter marker="KF_ECPDB" onMatch="ACCEPT" onMismatch="DENY"/>
+            </filters>
+            <!--<Property name="bootstrap.servers">192.168.154.136:9092</Property>-->
+            <!--<Property name="bootstrap.servers">hnmccfile002:9092,lvspublic001:9092,lvspublic002:9092</Property>-->
+            <Property name="bootstrap.servers">10.91.213.142:9092,10.91.213.143:9092,10.91.213.144:9092</Property>
+        </Kafka>
+        <Kafka name="Kafka2" topic="ecpCRM-log-topic">
+            <filters>
+                <!--只输出KF标记的日志-->
+                <MarkerFilter marker="KF_ECPCRM" onMatch="ACCEPT" onMismatch="DENY"/>
+            </filters>
+            <!--<Property name="bootstrap.servers">192.168.154.136:9092</Property>-->
+            <!--<Property name="bootstrap.servers">hnmccfile002:9092,lvspublic001:9092,lvspublic002:9092</Property>-->
+            <Property name="bootstrap.servers">10.91.213.142:9092,10.91.213.143:9092,10.91.213.144:9092</Property>
+        </Kafka>
+        <Kafka name="Kafka3" topic="ecpSty-log-topic">
+            <filters>
+                <!--只输出KF标记的日志-->
+                <MarkerFilter marker="KF_ECPSTY" onMatch="ACCEPT" onMismatch="DENY"/>
+            </filters>
+            <!--<Property name="bootstrap.servers">192.168.154.136:9092</Property>-->
+            <!--<Property name="bootstrap.servers">hnmccfile002:9092,lvspublic001:9092,lvspublic002:9092</Property>-->
+            <Property name="bootstrap.servers">10.91.213.142:9092,10.91.213.143:9092,10.91.213.144:9092</Property>
+        </Kafka>
+
+        <RollingFile name="messageRequest" fileName="${messagefile}/message.log"
+                     filePattern="${messagefile}/${date:yyyy-MM}/s-%d{yyyy-MM-dd}.messagelog.zip">
+            <PatternLayout pattern="%d %-5level [%t]%l - %msg%n"/>
+            <!--输出INFO级别-->
+            <ThresholdFilter level="WARN" onMatch="DENY" onMismatch="NEUTRAL"/>
+            <Policies>
+                <!--每天生成一个文件-->
+                <TimeBasedTriggeringPolicy modulate="true" interval="1"/>
+            </Policies>
+            <!--压缩采用最快的速度-->
+            <DefaultRolloverStrategy compressionLevel="1">
+                <Delete basePath="${baseDir}" maxDepth="2">
+                    <IfFileName glob="*/ecp-*.log.zip"/>
+                    <IfLastModified age="90d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <!--输出日志到kafka-->
+        <Logger name="com.xwtech.xwecp.logs" additivity="false">
+            <AppenderRef ref="Kafka"/>
+            <AppenderRef ref="Kafka2"/>
+            <AppenderRef ref="Kafka3"/>
+
+            <!--<AppenderRef ref="ecpLog"/>-->
+        </Logger>
+        <Logger name="com.xwtech.xwecp.communication" additivity="false">
+            <AppenderRef ref="messageRequest"/>
+        </Logger>
+        <!--暂不入文件-->
+        <!--<Logger name="com.xwtec.util.SocketUtil" additivity="false">
+            <AppenderRef ref="RollingFile"/>
+        </Logger>-->
+        <Root level="info">
+            <!--写入info级别-->
+            <AppenderRef ref="Console"/>
+
+        </Root>
+    </Loggers>
+</Configuration>

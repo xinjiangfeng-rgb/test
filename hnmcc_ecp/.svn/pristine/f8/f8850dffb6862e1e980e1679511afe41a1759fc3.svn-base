@@ -1,0 +1,147 @@
+package com.xwtech.xwecp.test;
+
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+import com.xwtech.xwecp.msg.InvocationContext;
+import com.xwtech.xwecp.service.logic.LIException;
+import com.xwtech.xwecp.service.logic.client.LIInvocationContext;
+import com.xwtech.xwecp.service.logic.client.XWECPLIClient;
+import com.xwtech.xwecp.service.logic.client_impl.common.IQueryPointsDueService;
+import com.xwtech.xwecp.service.logic.client_impl.common.impl.QueryPointsDueServiceImpl;
+import com.xwtech.xwecp.service.logic.pojo.*;
+import org.jboss.logging.Logger;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Properties;
+
+/*
+ *
+ * 积分到期查询
+ *
+ * */
+public class QRY180527Test {
+
+    private static final Logger logger = Logger.getLogger(QRY180527Test.class);
+
+    public static void main(String[] args) throws LIException {
+
+
+
+        String jsonStr = "{\n" +
+                "    \"respCode\":\"00000\",\n" +
+                "    \"result\":{\n" +
+                "        \"SO_MEMBER_DEAL\":[\n" +
+                "            {\n" +
+                "                \"SCORELIST\":{\n" +
+                "                    \"SCORELIST\":[\n" +
+                "                        {\n" +
+                "                            \"EXP_DATE\":\"2020-08-31 00:00:00\",\n" +
+                "                            \"SCORE\":0,\n" +
+                "                            \"EFF_DATE\":\"2019-08-25 23:04:01\"\n" +
+                "                        },\n" +
+                "                        {\n" +
+                "                            \"EXP_DATE\":\"2019-12-30 23:59:59\",\n" +
+                "                            \"SCORE\":0,\n" +
+                "                            \"EFF_DATE\":\"2018-01-01 00:00:00\"\n" +
+                "                        },\n" +
+                "                        {\n" +
+                "                            \"EXP_DATE\":\"2019-12-30 23:59:59\",\n" +
+                "                            \"SCORE\":0,\n" +
+                "                            \"EFF_DATE\":\"2019-04-29 02:55:43\"\n" +
+                "                        },\n" +
+                "                        {\n" +
+                "                            \"EXP_DATE\":\"2019-12-30 23:59:59\",\n" +
+                "                            \"SCORE\":0,\n" +
+                "                            \"EFF_DATE\":\"2015-11-26 00:00:00\"\n" +
+                "                        },\n" +
+                "                        {\n" +
+                "                            \"EXP_DATE\":\"2020-10-31 23:59:59\",\n" +
+                "                            \"SCORE\":0,\n" +
+                "                            \"EFF_DATE\":\"2019-10-26 00:00:00\"\n" +
+                "                        },\n" +
+                "                        {\n" +
+                "                            \"EXP_DATE\":\"2020-09-30 23:59:59\",\n" +
+                "                            \"SCORE\":0,\n" +
+                "                            \"EFF_DATE\":\"2019-09-26 00:00:00\"\n" +
+                "                        },\n" +
+                "                        {\n" +
+                "                            \"EXP_DATE\":\"2020-11-30 23:59:59\",\n" +
+                "                            \"SCORE\":31,\n" +
+                "                            \"EFF_DATE\":\"2019-11-26 00:00:00\"\n" +
+                "                        }\n" +
+                "                    ],\n" +
+                "                    \"SUMSCORELIST\":{\n" +
+                "                        \"SUMSCORE\":31\n" +
+                "                    }\n" +
+                "                }\n" +
+                "            }\n" +
+                "        ]\n" +
+                "    },\n" +
+                "    \"respDesc\":\"调用成功!\"\n" +
+                "}";
+        QRY180527Result result = new QRY180527Result();
+        JSONObject resultObj= JSONObject.parseObject(jsonStr).getJSONObject("result");
+        JSONArray deal = resultObj.getJSONArray("SO_MEMBER_DEAL");
+        System.out.println("deal==" + deal.toJSONString());
+        List<NewScoreBean> resultList = new ArrayList<>();
+        for (int i = 0; i < deal.size(); i++) {
+            JSONObject scoreObj = (JSONObject) deal.get(i);
+            NewScoreBean scoreBean = new NewScoreBean();
+            ScoreListBean scoreListBean=new ScoreListBean();
+            JSONObject scoreListObj = scoreObj.getJSONObject("SCORELIST");
+            JSONObject sumListobj= scoreListObj.getJSONObject("SUMSCORELIST");
+            SumsCorelist sumsCorelist=new SumsCorelist();
+            String sumScore=sumListobj.getString("SUMSCORE");
+            sumsCorelist.setSumsCore(sumScore);
+            scoreListBean.setSumsCorelist(sumsCorelist);
+            List<ScoreList> scoreList = new ArrayList<>();
+            JSONArray sumListArray=scoreListObj.getJSONArray("SCORELIST");
+            for (int j = 0; j < sumListArray.size(); j++) {
+                JSONObject resultScoreObj = (JSONObject) sumListArray.get(j);
+                ScoreList score = new ScoreList();
+                String Score = resultScoreObj.getString("SCORE");
+                String effDate = resultScoreObj.getString("EFF_DATE");
+                String expDate = resultScoreObj.getString("EXP_DATE");
+                score.setScore(Score);
+                score.setEff_date(effDate);
+                score.setExp_date(expDate);
+                scoreList.add(score);
+            }
+            scoreListBean.setScoreList(scoreList);
+            scoreBean.setScoreListBean(scoreListBean);
+            resultList.add(scoreBean);
+        }
+        result.setResult(resultList);
+        String s = JSON.toJSONString(result);
+        System.out.println("结果是==" + s);
+
+
+        //初始化ecp客户端片段
+        Properties props = new Properties();
+        props.put("client.channel", "hnmcc_channel");
+//        props.put("platform.url", "http://112.53.127.41:32812/hnmcc_ecp/xwecp.do");
+        props.put("platform.url", "http://218.206.204.153/hnmcc_ecp/xwecp.do");
+//        props.put("platform.url", "http://localhost:8080/hnmcc_ecp/xwecp.do");
+        props.put("platform.user", "hnmcc");
+        props.put("platform.password", "hnmcc");
+        XWECPLIClient client = XWECPLIClient.createInstance(props);
+        //逻辑接口调用片段
+        LIInvocationContext lic = LIInvocationContext.getContext();
+        lic.setBizCode("biz_code_170911");
+        lic.setOpType("开通/关闭/查询/变更");
+        lic.setUserBrand("12");
+        lic.setUserCity("12");
+        lic.setUserMobile("15837179491");
+        InvocationContext ic = new InvocationContext();
+        ic.addContextParameter("login_msisdn", "15890158325");
+        ic.addContextParameter("route_type", "2");
+        ic.addContextParameter("route_value", "15890158325");
+        lic.setContextParameter(ic);
+        IQueryPointsDueService co = new QueryPointsDueServiceImpl();
+
+        QRY180527Result ret = co.queryPointsDue("18703620768");
+        System.out.println(JSON.toJSONString(ret));
+    }
+}

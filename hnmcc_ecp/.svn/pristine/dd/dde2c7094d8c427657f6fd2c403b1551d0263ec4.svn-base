@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="
+            http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+	
+	<!--  配置数据源 -->
+	 <bean id="dataSource" class="org.apache.tomcat.jdbc.pool.DataSource" destroy-method="close"> 
+        <property name="poolProperties">  
+            <bean class="org.apache.tomcat.jdbc.pool.PoolProperties">  
+                <property name="url" value="${jdbc.url}"/>
+                <property name="driverClassName" value="${jdbc.driverClassName}"/>  
+                <property name="username" value="${jdbc.username}"/>  
+                <property name="password" value="${jdbc.password}"/>  
+                <property name="jmxEnabled" value="true"/>  <!-- 无 -->  <!-- 注册池JMX。的默认值是true。-->
+                <property name="testWhileIdle" value="false"/>  <!--默认值是false,当连接池中的空闲连接是否有效 -->
+                <property name="testOnBorrow" value="true"/>  <!-- 默认值是true，当从连接池取连接时，验证这个连接是否有效-->
+                <property name="validationInterval" value="30000"/>  <!-- 无 --> <!--检查连接死活的时间间隔（单位：毫妙） 0以下的话不检查。默认是0。 -->
+                <property name="testOnReturn" value="false"/>  <!--默认值是flase,当从把该连接放回到连接池的时，验证这个连接是 -->
+                <property name="validationQuery" value="select 1 from dual"/>  <!--一条sql语句，用来验证数据库连接是否正常。这条语句必须是一个查询模式，并至少返回一条数据。可以为任何可以验证数据库连接是否正常的sql-->
+                <property name="timeBetweenEvictionRunsMillis" value="30000"/>   <!-- 无 --><!-- 运行判断连接超时任务的时间间隔，单位为毫秒，默认为-1，即不执行任务。 --> 
+                <property name="maxActive" value="${jdbc.maxActive}"/>   <!-- 连接池的最大数据库连接数。设为0表示无限制。 -->
+                <property name="initialSize" value="${jdbc.initialSize}"/>  <!-- 初始化连接数量 -->
+                <property name="maxWait" value="${jdbc.maxWait}"/>  <!-- 最大建立连接等待时间。如果超过此时间将接到异常。设为-1表示无限制。 -->
+                <property name="removeAbandonedTimeout" value="180"/> <!--自我中断时间秒 -->
+                <property name="minEvictableIdleTimeMillis" value="30000"/>  <!-- 无 --> <!--连接的超时时间，默认为半小时。以毫秒为单位-->
+                <property name="maxIdle" value="${jdbc.maxIdle}"></property><!-- 最大空闲连接 -->
+                <property name="minIdle" value="${jdbc.minIdle}"/>   <!-- 最小等待连接中的数量,设 0 为没有限制 --> 
+                <property name="logAbandoned" value="true"/>  <!--是否记录中断事件， 默认为 false-->
+                <property name="removeAbandoned" value="true"/>  <!-- 是否自动回收超时连接-->
+      <!-- 无 --><property name="jdbcInterceptors" value="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer"/>  
+            </bean>  
+        </property>  
+    </bean> 
+	
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+       <property name="dataSource" ref="dataSource"/>
+    </bean>
+    
+    <!-- 指定处理此数据的类   --> 
+	<bean id="lobHandler" class="org.springframework.jdbc.support.lob.OracleLobHandler" 
+	 	  abstract="false" lazy-init="true" autowire="default"> 
+	</bean>
+</beans>
